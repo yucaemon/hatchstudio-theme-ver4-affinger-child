@@ -245,6 +245,9 @@ Version: 20210719
 #st-headerbox .st-header-content {
     padding: 0 !important;
 }
+#st-menuwide {
+  margin-bottom: 50px;
+}
 
 /*トップページ：基本初期設定　*/
 
@@ -421,11 +424,19 @@ br {
 }
 
 /*トップページ：サイド： プロフィール：*/
+
+.st-author-profile .st-author-nickname {
+  font-size: 95% !important;
+  margin: 10px 0 !important;
+}
+
 .st-author-profile-avatar img {
-  width: 89% !important;
+  width: 40% !important;
   height: auto !important;
   margin: 0 !important;
+  border-radius: 0 !important;
 }
+
 p.st-author-description {
   font-size: 12px;
   padding-bottom: 20px;
@@ -718,8 +729,9 @@ ul.profile-sns{
 .featured-contens__box {
   background-color: #ffecda;
   padding: 40px;
-  margin-bottom: 50px;
+  margin: 0 calc(50% - 50vw);
 }
+
 .featured-contens__box--img {
   width: 20%;
 }
