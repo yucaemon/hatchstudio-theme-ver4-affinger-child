@@ -452,27 +452,24 @@ p.st-author-description {
 .side img{
   width: 100%;
 }
+.st-author-profile-content, .st-author-profile-content {
+  padding: 0 !important;
+}
 
 /*トップページ：プロフィール下SNSアイコン：*/
 ul.profile-sns{
-    background-color: #fff298;
-    height: 65px;
-    vertical-align: middle;
-    line-height: 4;
-    margin: 0 auto 21px auto!important;
+  background-color: #fff298;
+  height: 65px;
+  vertical-align: middle;
 }
-.sns .facebook a {
-    background: #f9b19d;
+.st-author-profile .post .sns ul, .st-author-profile .sns ul {
+  display: flex;
+  align-items: center;
 }
-.sns .twitter a{
-    background: #a1dbde;
+.st-author-profile .sns {
+  margin-bottom: 25px !important;
 }
-.home .st-author-profile-content, .st-author-profile-content{
-  padding:0 !important;
-}
-.st-author-box .st-author-profile-content{
-  padding:0;
-}
+
 
 /*トップページ：サイド： おすすめ記事：*/
 .kanren dl {
