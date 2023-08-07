@@ -103,6 +103,12 @@ Version: 20210719
   img:not(.size-st_header_slider), video, object{
         max-width: 100%;
   }
+  .wide-obi{
+    background-color: #ffecda;
+    padding: 40px;
+    margin: 0 calc(50% - 50vw);
+        margin-bottom: 50px;
+  }
 
 /*
 
@@ -161,6 +167,8 @@ Version: 20210719
   /*ボタン色*/
   border-bottom: solid 6px #f39800;
   /*下線色*/ }
+
+
 
 /*
 
@@ -234,6 +242,9 @@ Version: 20210719
   margin-bottom: -3px;
 }
 
+#searchform{
+  border-radius: 20px;
+}
 
 /*メニューバー：既存の設定の上書き*/
 #st-header {
@@ -247,6 +258,10 @@ Version: 20210719
 }
 #st-menuwide {
   margin-bottom: 50px;
+}
+
+header #st-menuwide nav.menu li a {
+  color: #fff !important;
 }
 
 /*トップページ：基本初期設定　*/
@@ -282,14 +297,13 @@ br {
 .st-cardstyle .kanren dl {
     padding: 0;
 }
-
-
 .kanren-t{
     width: 100% !important;
     padding: 0 !important;
 }
-
-
+.kanren dd {
+padding-left: 0 !important;
+}
 
 /*トップページ：記事一覧&カードの横並び設定：既存の設定の上書き*/
 .row-box-article .kanren.shortcode-kanren {
@@ -298,12 +312,11 @@ br {
     flex-wrap: wrap !important;
     padding: 0;
 }
-.row-box-article  .st-cardstyle .kanren dt img {
+.st-topcontent .row-box-article  .st-cardstyle .kanren dt img {
     width: 100%!important;
     height: 191px;
     object-fit: cover;
 }
-
 .row-box-article .st-cardstyle .kanren dl {
     width: 256px !important;
 }
@@ -315,9 +328,6 @@ br {
 }
 
 /*トップページ：featured-contensバナー*/
-.featured-contens__box {
-  background-color: #ffecda;
- }
   .featured-contens__box--img {
     width: 20%; }
 .featured-contens__box-small {
@@ -327,12 +337,7 @@ br {
     padding-bottom: 10px; }
 
 
-/*トップページ：BOOのお悩み相談バナー：*/
-.qar-contens {
-  background-color: #ffecda;
-  margin: 0 calc(50% - 50vw) !important;
- }
-
+/*トップページ：BOOのお悩み相談バナー(大)*/
 .qar-contens__box__character {
     width: 15%; }
   .qar-contens__box__btn {
@@ -350,15 +355,27 @@ br {
     .qar-contens__box__txt--img-btm {
       width: 100%; }
 
-/*トップページ：今まで住んだところ：*/
-.area-contens__img{
-    width: 23%;
-    padding-bottom: 10px;
+/*トップページ：エリア記事今まで住んだところ：*/
+.area-list {
+  width: 275px;
 }
-
+.area-list .kanren dl {
+  display: flex;
+}
 .area-list + .area-list{
      margin-left: 33px;
  }
+ .area-list-body .kanren dt{
+  display: flex;
+  width: 166% !important;
+}
+.area-list .kanren dt img{
+  width: 100%;
+}
+.area-contens__img{
+  width: 23%;
+  padding-bottom: 10px;
+}
 
 .area-list-title {
   background: #ffbe5cb8;
@@ -370,61 +387,32 @@ br {
 }
 
 .area-list-body {
-    width: 200px;
     background-color: #ffead5;
-    padding: 0 33px;
+    padding: 0 10px;
 }
 .area-list-body .kanren:not(.st-cardbox) dd {
    background-color: #ffead5;
 }
 
-/*トップページ： ブロガー：*/
-.blogger {
-  background-color: #ffe198;
-}
-.blogger__header {
-  width: 100%;
-  margin: 0 auto;
-  padding-bottom: 4%;
-}
-
-.blogger__header--txt {
-  text-align: center;
-  font-size: 2.3em;
-  color: #fff;
-  padding: 40px 0;
-  font-weight: bold;
-  letter-spacing: 3px;
-}
-.blogger__header--img {
-  width: 9%;
-  margin-right: 3%;
-}
-.blogger__box {
-  text-align: center;
-  width: 13%;
-  padding-bottom: 3%;
-}
-.blogger__box img {
-  width: 100%;
-}
-.circle img {
-    border-radius: 50%;
-}
-.blogger__box__img.circle {
-  width: 57%;
-  margin: 0 auto;
+.area-list h5.kanren-t a{
+  font-size: 13px !important;
+  line-height: 1.7 !important;
+  padding-left: 10px !important;
   display: block;
 }
-.blogger__container {
-  padding: 40px 40px;
+
+/*トップページ：サイド */
+.side{
+  padding: 10px 20px 10px;
 }
-.blogger__box__name {
-  font-size: 0.9em;
+.side img{
+  width: 100%;
+}
+.st-author-profile-content, .st-author-profile-content {
+  padding: 0 !important;
 }
 
 /*トップページ：サイド： プロフィール：*/
-
 .st-author-profile .st-author-nickname {
   font-size: 95% !important;
   margin: 10px 0 !important;
@@ -445,16 +433,6 @@ p.st-author-description {
   letter-spacing: 0.7px;
   text-align: left;
 }
-/*トップページ：サイド */
-.side{
-  padding: 10px 20px 10px;
-}
-.side img{
-  width: 100%;
-}
-.st-author-profile-content, .st-author-profile-content {
-  padding: 0 !important;
-}
 
 /*トップページ：プロフィール下SNSアイコン：*/
 ul.profile-sns{
@@ -470,32 +448,6 @@ ul.profile-sns{
   margin-bottom: 25px !important;
 }
 
-
-/*トップページ：サイド： おすすめ記事：*/
-.kanren dl {
-    border: none;
-}
-
-.side .kanren:not(.st-cardbox) dt img{
-    width: 114px !important;
-    height: 83px !important;
-    object-fit: cover;
-    margin-right: 15px;
-}
-.side .kanren:not(.st-cardbox) dt {
-    width: auto;
-}
-.side .kanren .clearfix dd h5:not([class^="is-style-st-heading-custom-"]):not([class*=" is-style-st-heading-custom-"]):not(.st-css-no2) a {
-    font-size: 13px;
-    line-height: 26px;
-}
-
-.pop-box{
-  padding: 20px 0 !important;
-}
-.kanren:not(.st-cardbox) dd {
-  padding: 0 !important; 
-}
 
 /*フッダー*/
 /*フッダーのロゴとキャッチフレーズを消す*/
@@ -525,11 +477,10 @@ ul.profile-sns{
     padding-bottom: 21px;
 }
 
-
-
 #footer-wrapper .footer__box.page__links {
     padding: 0 63px;
 }
+
 /*投稿ページ：レイアウト：*/
 .single-post #content{
       padding: 0 70px;
@@ -540,9 +491,7 @@ ul.profile-sns{
   padding: 0;
 }
 
-
 /*投稿ページ：下： ウェジット投稿記事の下に一括表示のタイトルのレイアウト修正：*/
-
 .st-widgets-box h3,.st-widgets-title{
     background: #ffede9 !important;
     color: #737373 !important;
@@ -590,16 +539,9 @@ ul.profile-sns{
 
 /*
 
-	Q&Aバナー
+	Q&Aバナー（小）
 
 *************************************************/
-.qar-contens {
-  background-color: #ffecda; }
-.qar-contens__box {
-  background-color: #ffecda;
-  padding: 40px; 
-  margin: 0 calc(50% - 50vw);
-}
   .qar-contens__box__btn {
     padding-top: 68px; }
   .qar-contens__box__txt {
@@ -723,12 +665,6 @@ ul.profile-sns{
 
 /* ３段（featured-contentイラストのおすすめ）のレイアウト */
 
-.featured-contens__box {
-  background-color: #ffecda;
-  padding: 40px;
-  margin: 0 calc(50% - 50vw);
-}
-
 .featured-contens__box--img {
   width: 20%;
 }
@@ -828,11 +764,7 @@ ul.profile-sns{
     display: none;
 }
 
-#st-header-under-widgets-box .osusume-articles .kanren dt img {
-    width: 100%;
-    height: 163px;
-    object-fit: cover;
-}
+
 
 #st-header-under-widgets-box .st-widgets-title {
       padding: 10px 0;
