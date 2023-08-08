@@ -454,32 +454,20 @@ ul.profile-sns{
 .footerlogo {
     display: none;
 }
-.footer-description{
-    display: none;
-}
-#footer a {
-    color: #57bac5 !important;
-}
-#footer ul{
-    list-style-type: none;
-    padding-left:0;
-}
 
 #footer-wrapper {
-    padding: 60px 28px;
-}
-#footer-wrapper .textwidget.custom-html-widget {
-    display: flex;
-    color: #57bac5 !important;
-}
-#footer-wrapper dt.footer__box__title {
-    font-size: 21px;
-    padding-bottom: 21px;
+  max-width: 100% !important; 
+  margin: 0 calc(50% - 50vw) !important;
+  padding: 60px 0 !important;
 }
 
-#footer-wrapper .footer__box.page__links {
-    padding: 0 63px;
+.footermenubox::before {
+  content: url(./images/logo-sky.svg);
+  display: inline-block;
+  width: 18%;
+  padding-bottom: 30px;
 }
+
 
 /*投稿ページ：レイアウト：*/
 .single-post #content{
