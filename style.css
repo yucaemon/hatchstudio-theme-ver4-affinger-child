@@ -276,7 +276,7 @@ header #st-menuwide nav.menu li a {
 }
 
 section {
-    margin-bottom: 0;
+  margin-bottom: 60px !important;
 }
 
 br {
@@ -304,6 +304,23 @@ br {
 .kanren dd {
 padding-left: 0 !important;
 }
+
+.kanren dl {
+border-bottom-style: none !important;
+}
+
+.kanren dt img {
+  width: 100% !important;
+}
+
+/*トップページ：アフィンガー設定のおすすめ記事のデフォルト設定の上書き*/
+span.poprank-no{
+  display: none;
+}
+.pop-box, .nowhits .pop-box, .nowhits-eye .pop-box, .st-eyecatch + .nowhits .pop-box {
+  background: #fff !important;
+}
+
 
 /*トップページ：記事一覧&カードの横並び設定：既存の設定の上書き*/
 .row-box-article .kanren.shortcode-kanren {
@@ -434,7 +451,7 @@ p.st-author-description {
   text-align: left;
 }
 
-/*トップページ：プロフィール下SNSアイコン：*/
+/*トップページ：サイド：プロフィール下SNSアイコン：*/
 ul.profile-sns{
   background-color: #fff298;
   height: 65px;
@@ -446,6 +463,33 @@ ul.profile-sns{
 }
 .st-author-profile .sns {
   margin-bottom: 25px !important;
+}
+
+/*トップページ：サイド：記事一覧：AFFINGER管理「ヘッダー下おすすめ」 [st-osusume]*/
+
+.kanren.pop-box::before {
+  content: url(./images/side__ranking-txt.svg);
+  display: block;
+  width: 47%;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+
+.home-post .side .kanren{
+  padding: 0;
+}
+
+.home-post .side .kanren dl{
+  display: flex;
+}
+
+.home-post .side .kanren dt {
+  width: 100% !important;
+  padding-right: 18px;
+}
+
+.home-post .side .kanren .popular-t a{
+  font-size: 14px !important;
 }
 
 
