@@ -512,15 +512,73 @@ ul.profile-sns{
   padding-bottom: 30px;
 }
 
+/*
 
-/*投稿ページ：レイアウト：*/
-.single-post #content{
-      padding: 0 70px;
+投稿ページ
+
+*************************************************/
+
+/*　投稿ページ(SNSアイコン、更新日の位置)　*/
+
+.blogbox {
+  display: block;
+  float: right;
+  padding-top: 22px;
 }
 
-.single-post main {
-  width: 70%;
+.st-sns-top {
+  display: inline-block;
+}
+
+/*　投稿ページ(見出しデザイン)　*/
+
+  h2:not([class^="is-style-st-heading-custom-"]):not([class*=" is-style-st-heading-custom-"]):not(.st-css-no2), .h2modoki{
+    padding: 0;
+  }
+
+.font-decoration-underline{
+  display: inline-block;
+  width: 100%;
+  font-size: 27px;
+  left: auto;
+  padding-bottom: 25px;
+  padding-top: 35px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  border-bottom: solid 3px #ffcf6e;
+}
+
+.detail-balloon-box {
+  width: 100%;
+  padding: 25px 5px;
+  align-items: center;
+}
+
+.detail-balloon-box__icon {
+  padding-right: 30px;
+}
+
+.detail-balloon-box__img img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border: solid 2px #ffcf6e;
+  border-radius: 50%;
   padding: 0;
+}
+
+.detail-balloon-box__txt {
+  width: 80%;
+  background-color: #f3f3f3;
+  padding: 15px;
+}
+
+.detail-balloon-box__title {
+  text-align: center;
+  font-size: 11px;
+  width: 80px;
+  line-height: 1.2;
+  padding-top: 7px;
 }
 
 /*投稿ページ：下： ウェジット投稿記事の下に一括表示のタイトルのレイアウト修正：*/
@@ -530,6 +588,7 @@ ul.profile-sns{
     border: none !important;
     font-size: 20px !important;
 }
+
 
 /*投稿ページ：下： 関連記事のレイアウト修正：*/
 
