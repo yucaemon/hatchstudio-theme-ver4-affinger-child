@@ -518,7 +518,21 @@ ul.profile-sns{
 
 *************************************************/
 
-/*　投稿ページ(SNSアイコン、更新日の位置)　*/
+/*　投稿ページの上(タイトル、パンくず、カテゴリーアイコン、SNSアイコン、更新日の位置)　*/
+
+.entry-title{
+    padding: 0 !important;
+    margin-top:0 !important;
+}
+
+#breadcrumb {
+  display: inline-block;
+}
+
+.post .st-catgroup{
+  display: inline-block;
+  padding-left: 20px;
+}
 
 .blogbox {
   display: block;
@@ -535,6 +549,14 @@ ul.profile-sns{
   h2:not([class^="is-style-st-heading-custom-"]):not([class*=" is-style-st-heading-custom-"]):not(.st-css-no2), .h2modoki{
     padding: 0;
   }
+
+.post a{
+  text-decoration: none !important;
+}
+
+.post ul{
+  list-style-type: none !important;
+}
 
 .font-decoration-underline{
   display: inline-block;
@@ -581,6 +603,347 @@ ul.profile-sns{
   padding-top: 7px;
 }
 
+.font-decoration-btn {
+  display: block;
+  font-size: 13px;
+  font-size: 1.3rem;
+  line-height: 1;
+  font-family: "Montserrat","游ゴシック",YuGothic,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;
+  color: #222;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  background-color: #ffcf6e;
+  border-radius: 5px;
+  padding: 20px 20px;
+  margin: 20px 0;
+}
+
+.external-link {
+  padding: 20px;
+  border: solid 1px #dadada;
+  margin: 10px 0 20px 0;
+  font-size: 17px;
+}
+.external-link__title {
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo UI", "メイリオ", Meiryo, sans-serif;
+  color: #222;
+  word-wrap: break-word;
+  font-size: 10px;
+  font-size: 1rem;
+  line-height: 1;
+  line-height: 1.4;
+  font-weight: 600;
+  letter-spacing: .05em;
+  line-height: 1.6;
+  padding-bottom: 0;
+  color: #f1a239;
+  text-decoration:none;
+}
+
+.detail-box02, .detail-box03, .detail-author-box {
+  border: solid 1px #d4d4d4;
+  margin: 30px 0; 
+}
+
+ .detail-box02 a, .detail-box03 a, .detail-author-box a {
+    color: #333; 
+}
+    
+ .detail-box02__img {
+    width: 21%;
+    padding-right: 15px;
+    height: 105px; 
+}
+
+.detail-box02__txt {
+    width: 75%; 
+}
+.detail-box02__txt p {
+      color: #dcdcdc;
+      font-size: 7px;
+      font-size: 0.7rem;
+      line-height: 1.7142857143;
+      padding-bottom: 0; 
+  }
+.detail-box02__sub-title {
+  font-size: 0.7rem;
+  color: #9c9c9c;
+  padding-top: 10px;
+}
+
+.detail-box02__title {
+    font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo UI", "メイリオ", Meiryo, sans-serif;
+    color: #222;
+    word-wrap: break-word;
+    font-size: 11px;
+    font-size: 0.9rem;
+    line-height: 1;
+    line-height: 1.4;
+    font-weight: 600;
+    letter-spacing: .05em;
+    line-height: 1.6;
+    padding: 7px 0; 
+  }
+
+.detail-box02 img, .detail-box03 img, .detail-author-box img {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+  }
+
+ .detail-box01 {
+    border: solid 1px #d4d4d4;
+    font-size: 10px;
+    font-size: 1rem;
+    line-height: 1;
+    padding: 20px;
+    margin: 30px 0; 
+  }
+.detail-box01__title {
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo UI", "メイリオ", Meiryo, sans-serif;
+  color: #222;
+  word-wrap: break-word;
+  font-size: 11px;
+  font-size: 1.1rem;
+  line-height: 1;
+  line-height: 1.4;
+  font-weight: 600;
+  letter-spacing: .05em;
+  line-height: 1.6;
+  margin-bottom: 20px; 
+}
+.detail-box01__contain p {
+  letter-spacing: 1.2px;
+  font-size: 8px;
+  font-size: 0.8rem;
+  line-height: 1;
+  color: #9c9c9c;
+  padding-bottom: 1%;
+  line-height: 1.5; 
+}
+.detail-box01__contain p i {
+  font-size: 9px;
+  font-size: 0.9rem;
+  line-height: 1;
+  padding-right: 10px;
+}
+.detail-box01__contain p a {
+  font-size: 8px;
+  font-size: 0.8rem;
+  line-height: 1;
+  color: #9c9c9c; 
+}
+
+.detail-balloon-box {
+width: 100%;
+padding: 25px 5px;
+align-items: center; 
+}
+.detail-balloon-box__img img {
+width: 80px;
+height: 80px;
+object-fit: cover;
+border: solid 2px #ffcf6e;
+border-radius: 50%;
+padding: 0; 
+}
+.detail-balloon-box__boo__img img {
+width: 80px;
+height: 80px;
+padding: 0; 
+}
+.detail-balloon-box__title {
+text-align: center;
+font-size: 11px;
+width: 80px;
+line-height: 1.2;
+padding-top: 7px;
+}
+.detail-balloon-box__icon {
+padding-right: 30px; 
+}
+.detail-balloon-box__txt {
+width: 80%;
+background-color: #f3f3f3;
+padding: 15px; 
+}
+.detail-balloon-box__boo {
+background-color: #e1f2f3;
+width: 80%;
+padding: 20px;
+position: relative;
+border-radius: 15px;
+-webkit-border-radius: 15px; 
+}
+.detail-balloon-box__boo:before {
+content: '';
+position: absolute;
+left: -10px;
+top: 20px;
+display: block;
+width: 0;
+height: 0;
+border-right: 10px solid #e0edff;
+border-top: 10px solid transparent;
+border-bottom: 10px solid transparent; 
+}
+.postscript-info {
+  background-color: #efefef;
+  padding: 28px;
+  margin: 15px 0 20px 0;
+  color: #a5a5a5; 
+}
+.dotbox-div {
+background-color: #f8f9ff;
+border: dashed 1px #4865b2;
+padding: 20px 20px;
+margin-bottom: 30px; 
+}
+.dotbox-div a {
+color: #337ab7;
+font-weight: bold;
+}
+.dotbox-div ul{
+  padding: 0;
+  margin: 0;
+}
+.dotbox-div li {
+margin-bottom: 10px;
+text-align: left; 
+}
+
+.link-div {
+  border: solid 1px #dedede;
+  padding: 14px 64px;
+  margin-bottom: 30px;
+  background-color: #f3f7ff;
+}
+.link-div a {
+  color: #337ab7 !important;
+  font-weight: bold;
+  font-size: 17px; 
+}
+.link-div .link-div img {
+  width: auto; 
+}
+.producttitle-btn {
+  background-color: #ffe569e0;
+  border-radius: 5px;
+  border-bottom: none;
+  position: relative;
+  border: none; 
+}
+.producttitle-btn:after {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 30px;
+  border: 10px solid transparent;
+  border-top: 10px solid #ffe569e0;
+  width: 0;
+  height: 0;
+}
+
+.productdetailbox {
+width: 100%;
+margin-bottom: 30px; 
+}
+.productdetailbox__img img {
+display: inline-block;
+text-align: center;
+vertical-align: top; 
+}
+.productdetailbox__lists {
+font-size: 10px;
+font-size: 1rem;
+line-height: 1;
+border-radius: 20px;
+border: 3px solid #ffceca;
+background: 0 0;
+color: #f2695d;
+width: 63%;
+margin: 33px 0 33px 29px;
+padding: 1.5em;
+font-weight: 700; 
+}
+.productdetailbox__lists__list {
+padding-bottom: 5px;
+line-height: 1.5;
+ }
+.productlistsbox {
+border-top: 1px #ccc solid;
+padding: 20px 0 0;
+margin: 20px 0; 
+}
+.productlistsbox__img img {
+width: 200px;
+height: 137px;
+padding: 0;
+padding-right: 15px;
+object-fit: cover; 
+}
+.productlistsbox__title {
+padding-bottom: 0;
+font-size: 13px;
+font-size: 1.3rem;
+line-height: 1;
+text-decoration: underline; 
+}
+
+
+.shortcode__btn__container-center .shortcode__btn {
+width: 51% !important;
+margin: 0 auto;
+}
+.shortcode-btn {
+box-sizing: border-box;
+font-weight: 700;
+border-radius: 50px;
+position: relative;
+text-align: center;
+display: inline-block;
+width: 100%;
+box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2), 0 2px 3px -2px rgba(0, 0, 0, 0.15);
+background-color: #4575B4; 
+}
+.shortcode-btn a {
+color: #fff; 
+}
+.shortcode-btn__container-center {
+display: flex;
+justify-content: center; 
+}
+.btn-shine {
+color: #fff;
+background-color: #c9171e;
+font-weight: bold;
+border-radius: 4px;
+cursor: pointer;
+line-height: normal;
+text-decoration: none;
+border: 2px solid transparent;
+padding: 14px 20px;
+font-size: 18px;
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+overflow: hidden;
+}
+
+.btn-amazon {
+background: #f29b35;
+}
+.btn-amazon-jan {
+background: #f31333; 
+}
+.shortcode__btn{
+padding-right: 20px;
+}
+
 /*投稿ページ：下： ウェジット投稿記事の下に一括表示のタイトルのレイアウト修正：*/
 .st-widgets-box h3,.st-widgets-title{
     background: #ffede9 !important;
@@ -588,7 +951,6 @@ ul.profile-sns{
     border: none !important;
     font-size: 20px !important;
 }
-
 
 /*投稿ページ：下： 関連記事のレイアウト修正：*/
 
