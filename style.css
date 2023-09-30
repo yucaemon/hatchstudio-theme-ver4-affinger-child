@@ -953,13 +953,12 @@ padding-right: 20px;
 }
 
 /*投稿ページ：下： 関連記事のレイアウト修正：*/
-
 .yarpp-thumbnail {
-    width: 268px !important;
-    height: 270px!important;
+    width: 247px !important;
+    height: 260px!important;
     margin: 5px !important;
     border: none !important;
-    overflow:hidden
+    overflow:hidden;
 }
 .yarpp-thumbnail > img{
     width: 330px !important;
@@ -972,53 +971,74 @@ padding-right: 20px;
 }
 
 /*投稿ページ：下： featured-contensのレイアウト修正：*/
-
-  .single-page .featured-contens__box--img {
-    width: 44%;
-    padding: 13px 0;
-  }
-  .single-page .featured-contens__box {
-    padding: 30px 30px;
+.single-page .featured-contens__box--img {
+  width: 44%;
+  padding: 13px 0;
+}
+.single-page .featured-contens__box {
+  padding: 30px 30px;
+}
+.featured-contens__box {
+  background-color: #ffecda;
+  padding: 40px;
+  margin-bottom: 50px;
+}
+/*投稿ページ：下： (最新記事）＆（おすすめ記事)*/
+.articles__container__bottom .bt-left {
+  width: 27%;
+}
+.articles__container__bottom .bt-right {
+  width: 70%;
 }
 
 /*投稿ページ：下： tag cloudのレイアウト修正：*/
-
 .tagcloud a:hover{
   color: rgb(0 0 0);
   font-weight: bold;
   text-decoration: underline;
 }
 
-
 /*
 
 	Q&Aバナー（小）
 
 *************************************************/
-  .qar-contens__box__btn {
-    padding-top: 68px; }
-  .qar-contens__box__txt {
-    padding-right: 50px;
-    width: 43%; }
-    .qar-contens__box__txt--mid {
-      font-size: 30px;
-      color: #f9a694;
-      font-weight: bold;
-      padding-bottom: 5px; }
-    .qar-contens__box__txt--img-top {
-      width: 38%;
-      margin: 0 auto; }
-    .qar-contens__box__txt--img-btm {
-      width: 100%; }
+.qar-contens__box {
+  background-color: #ffecda;
+  padding: 40px;
+}     
+.qar-contens__box__btn {
+  padding-top: 68px; 
+}
+.qar-contens__box__txt {
+  padding-right: 50px;
+  width: 43%; 
+}
+.qar-contens__box__txt--mid {
+  font-size: 30px;
+  color: #f9a694;
+  font-weight: bold;
+  padding-bottom: 5px; 
+}
+.qar-contens__box__txt--img-top {
+  width: 38%;
+  margin: 0 auto; 
+}
+.qar-contens__box__txt--img-btm {
+  width: 100%; 
+}
+
 
 /* Q&Aバナーのシングルページの小さい版 */
 .qar-contens__box-small .qar-contens__box__character{
-    width: 24%;
+  width: 24%;
 }
-
 .qar-contens__box-small .qar-contens__box__txt{
-    width: 43%;
-    padding-left: 88px;
+  width: 63%;
+  padding-left: 40px;
+}
+.qar-contens__box__btn {
+  padding-top: 35px;
 }
 
 
