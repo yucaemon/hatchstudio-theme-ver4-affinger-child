@@ -467,7 +467,7 @@ ul.profile-sns{
 
 /*トップページ：サイド：記事一覧：AFFINGER管理「ヘッダー下おすすめ」 [st-osusume]*/
 
-.kanren.pop-box::before {
+.side .kanren.pop-box::before {
   content: url(./images/side__ranking-txt.svg);
   display: block;
   width: 47%;
