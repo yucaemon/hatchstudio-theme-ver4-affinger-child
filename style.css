@@ -970,6 +970,14 @@ padding-right: 20px;
     width: auto !important;
 }
 
+/*投稿ページ：下： tag cloudのレイアウト修正：*/
+.tagcloud a:hover{
+  color: rgb(0 0 0);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+
 /*投稿ページ：下： featured-contensのレイアウト修正：*/
 .single-page .featured-contens__box--img {
   width: 44%;
@@ -983,6 +991,7 @@ padding-right: 20px;
   padding: 40px;
   margin-bottom: 50px;
 }
+
 /*投稿ページ：下： (最新記事）＆（おすすめ記事)*/
 .articles__container__bottom .bt-left {
   width: 27%;
@@ -991,12 +1000,27 @@ padding-right: 20px;
   width: 70%;
 }
 
-/*投稿ページ：下： tag cloudのレイアウト修正：*/
-.tagcloud a:hover{
-  color: rgb(0 0 0);
-  font-weight: bold;
-  text-decoration: underline;
+/*投稿ページ：下： おすすめ記事レイアウト*/
+
+.articles__container__bottom .bt-right .kanren.pop-box {
+  display: flex;
+  flex-wrap:wrap;
 }
+
+.articles__container__bottom .bt-right .kanren dt {
+  width: 100%;
+  float: none;
+}
+
+.articles__container__bottom .bt-right .kanren.pop-box dl{
+  width: 200px !important;
+
+}
+
+
+
+
+
 
 /*
 
@@ -1029,7 +1053,7 @@ padding-right: 20px;
 }
 
 
-/* Q&Aバナーのシングルページの小さい版 */
+/* Q&Aバナーの投稿ページの小さい版 */
 .qar-contens__box-small .qar-contens__box__character{
   width: 24%;
 }
