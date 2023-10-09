@@ -500,7 +500,6 @@ ul.profile-sns{
 }
 
 #footer-wrapper {
-  max-width: 100% !important; 
   margin: 0 calc(50% - 50vw) !important;
   padding: 60px 0 !important;
 }
@@ -1005,6 +1004,14 @@ padding-right: 20px;
 .articles__container__bottom .bt-right .kanren.pop-box {
   display: flex;
   flex-wrap:wrap;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.articles__container__bottom .bt-right .kanren.pop-box::after{
+  content:"";
+  display: block;
+  width:30%;
 }
 
 .articles__container__bottom .bt-right .kanren dt {
@@ -1013,13 +1020,22 @@ padding-right: 20px;
 }
 
 .articles__container__bottom .bt-right .kanren.pop-box dl{
-  width: 200px !important;
-
+  width:30%;
+  padding:10px;
+  margin-bottom:10px;
 }
 
+.articles__container__bottom .bt-right .kanren dt img {
+  width: 100% !important;
+  height: 175px;
+  object-fit: cover;
+}
 
-
-
+.articles__container__bottom .bt-right .kanren.pop-box dd h5{
+  padding: 10px 0 !important;
+  text-align: left;
+  
+}
 
 
 /*
