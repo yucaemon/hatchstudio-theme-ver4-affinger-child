@@ -308,6 +308,11 @@ padding-left: 0 !important;
 .kanren dl {
 border-bottom-style: none !important;
 }
+.kanren dt {
+  width: 128px;
+  padding-right: 10px;
+  object-fit: cover;
+}
 
 .kanren dt img {
   width: 100% !important;
@@ -494,8 +499,7 @@ ul.profile-sns{
 
 
 /*フッダー*/
-/*フッダーのロゴとキャッチフレーズを消す*/
-.footerlogo {
+.footerlogo { /*ロゴとキャッチフレーズを消す*/
     display: none;
 }
 
@@ -513,49 +517,9 @@ ul.profile-sns{
 
 /*
 
-投稿ページ
+ショートカットデザイン
 
 *************************************************/
-
-/*　投稿ページの上(タイトル、パンくず、カテゴリーアイコン、SNSアイコン、更新日の位置)　*/
-
-.entry-title{
-    padding: 0 !important;
-    margin-top:0 !important;
-}
-
-#breadcrumb {
-  display: inline-block;
-}
-
-.post .st-catgroup{
-  display: inline-block;
-  padding-left: 20px;
-}
-
-.blogbox {
-  display: block;
-  float: right;
-  padding-top: 22px;
-}
-
-.st-sns-top {
-  display: inline-block;
-}
-
-/*　投稿ページ(見出しデザイン)　*/
-
-  h2:not([class^="is-style-st-heading-custom-"]):not([class*=" is-style-st-heading-custom-"]):not(.st-css-no2), .h2modoki{
-    padding: 0;
-  }
-
-.post a{
-  text-decoration: none !important;
-}
-
-.post ul{
-  list-style-type: none !important;
-}
 
 .font-decoration-underline{
   display: inline-block;
@@ -943,13 +907,52 @@ background: #f31333;
 padding-right: 20px;
 }
 
-/*投稿ページ：下： ウェジット投稿記事の下に一括表示のタイトルのレイアウト修正：*/
-.st-widgets-box h3,.st-widgets-title{
-    background: #ffede9 !important;
-    color: #737373 !important;
-    border: none !important;
-    font-size: 20px !important;
+/*
+
+	投稿ページ
+
+*************************************************/
+
+/*　投稿ページの上(タイトル、パンくず、カテゴリーアイコン、SNSアイコン、更新日の位置)　*/
+
+.entry-title{
+    padding: 0 !important;
+    margin-top:0 !important;
 }
+
+#breadcrumb {
+  display: inline-block;
+}
+
+.post .st-catgroup{
+  display: inline-block;
+  padding-left: 20px;
+}
+
+.blogbox {
+  display: block;
+  float: right;
+  padding-top: 22px;
+}
+
+.st-sns-top {
+  display: inline-block;
+}
+
+/*　投稿ページ(見出しデザイン)　*/
+
+h2:not([class^="is-style-st-heading-custom-"]):not([class*=" is-style-st-heading-custom-"]):not(.st-css-no2), .h2modoki{
+  padding: 0;
+}
+
+.post a{
+  text-decoration: none !important;
+}
+
+.post ul{
+  list-style-type: none !important;
+}
+
 
 /*投稿ページ：下： 関連記事のレイアウト修正：*/
 .yarpp-thumbnail {
@@ -976,7 +979,6 @@ padding-right: 20px;
   text-decoration: underline;
 }
 
-
 /*投稿ページ：下： featured-contensのレイアウト修正：*/
 .single-page .featured-contens__box--img {
   width: 44%;
@@ -991,6 +993,16 @@ padding-right: 20px;
   margin-bottom: 50px;
 }
 
+/*投稿ページ：下： (最新記事）＆（おすすめ記事)のタイトルのレイアウト修正：*/
+.st-widgets-box h3,.st-widgets-title{
+  background: #ffede9 !important;
+  color: #737373 !important;
+  border: none !important;
+  font-size: 20px !important;
+  padding: 10px;
+}
+
+
 /*投稿ページ：下： (最新記事）＆（おすすめ記事)*/
 .articles__container__bottom .bt-left {
   width: 27%;
@@ -998,39 +1010,39 @@ padding-right: 20px;
 .articles__container__bottom .bt-right {
   width: 70%;
 }
-
+/*投稿ページ：下： (最新記事）*/
+.articles__container__bottom .widget_newentry_widget dt {
+  padding-right: 10px;
+}
 /*投稿ページ：下： おすすめ記事レイアウト*/
-
+.st-widgets-title::before{
+  display: none;
+}
 .articles__container__bottom .bt-right .kanren.pop-box {
   display: flex;
   flex-wrap:wrap;
   justify-content: space-around;
   padding: 0;
 }
-
 .articles__container__bottom .bt-right .kanren.pop-box::after{
   content:"";
   display: block;
   width:30%;
 }
-
 .articles__container__bottom .bt-right .kanren dt {
   width: 100%;
   float: none;
 }
-
 .articles__container__bottom .bt-right .kanren.pop-box dl{
   width:30%;
   padding:10px;
   margin-bottom:10px;
 }
-
 .articles__container__bottom .bt-right .kanren dt img {
   width: 100% !important;
   height: 175px;
   object-fit: cover;
 }
-
 .articles__container__bottom .bt-right .kanren.pop-box dd h5{
   padding: 10px 0 !important;
   text-align: left;
@@ -1233,7 +1245,7 @@ padding-right: 20px;
     text-align: left;
 }
 
-	/*フッダー上の『おすすめ記事』のレイアウト修正*/
+/*フッダー上の『おすすめ記事』のレイアウト修正*/
 
 #st-header-under-widgets-box .osusume-articles {
       width: 900px;
