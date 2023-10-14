@@ -168,6 +168,7 @@ Version: 20210719
   border-bottom: solid 6px #f39800;
   /*下線色*/ }
 
+
 /*
 
 ショートカットデザイン
@@ -562,6 +563,115 @@ padding-right: 20px;
 
 /*
 
+	アフィンガー デフォルト設定の上書き:
+
+*************************************************/
+
+.colum1 main{ /*一旦、全ての余白を取る*/
+    margin: 0;
+    padding: 0;
+}
+
+.outer__inner {
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 60px !important;
+}
+
+br {
+    display: none;
+}
+.top-wbox-u > * { /*フッダーの上の余白を取る*/
+    margin-bottom: 0;
+}
+
+span.poprank-no{
+  display: none;
+}
+.pop-box, .nowhits .pop-box, .nowhits-eye .pop-box, .st-eyecatch + .nowhits .pop-box {
+  background: #fff !important;
+}
+
+.st-widgets-title::before {
+  display: none;
+}
+#side .pop-box.kanren {
+  margin-top: 0;
+}
+
+
+/*メニューバー*/
+#st-header {
+  min-height: 0 !important;
+}
+#st-menubox {
+  padding-top: 0 !important;
+}
+#st-headerbox .st-header-content {
+  padding: 0 !important;
+}
+#st-menuwide {
+margin-bottom: 50px;
+}
+
+header #st-menuwide nav.menu li a {
+color: #fff !important;
+}
+
+/*トップページ：記事一覧&カードの横並び設定 */
+.row-box-article .kanren.shortcode-kanren {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap !important;
+    padding: 0;
+}
+.st-topcontent .row-box-article  .st-cardstyle .kanren dt img {
+    width: 100%!important;
+    height: 191px;
+    object-fit: cover;
+}
+.row-box-article .st-cardstyle .kanren dl {
+    width: 256px !important;
+}
+
+.btn-img--toallpage {
+    width: 28%;
+    margin: 0 auto;
+    margin-top: 23px;
+}
+
+/* カードスタイル: 関連記事の共通設定 */
+.st-cardstyle .kanren dl, .st-cardstyle .kanren.st-cardbox dl:last-child{
+  border: none;
+}
+.st-cardstyle .kanren dl {
+    padding: 0;
+}
+.kanren-t{
+    width: 100% !important;
+    padding: 0 !important;
+}
+.kanren dd {
+padding-left: 0 !important;
+}
+
+.kanren dl {
+border-bottom-style: none !important;
+}
+.kanren dt {
+  width: 128px;
+  padding-right: 10px;
+  object-fit: cover;
+}
+
+.kanren dt img {
+  width: 100% !important;
+}
+
+/*
+
 	ヘッダー
 
 *************************************************/
@@ -636,114 +746,12 @@ padding-right: 20px;
   border-radius: 20px;
 }
 
-/*メニューバー：既存の設定の上書き*/
-#st-header {
-    min-height: 0 !important;
-}
-#st-menubox {
-    padding-top: 0 !important;
-}
-#st-headerbox .st-header-content {
-    padding: 0 !important;
-}
-#st-menuwide {
-  margin-bottom: 50px;
-}
-
-header #st-menuwide nav.menu li a {
-  color: #fff !important;
-}
 
 /*
 
 	トップページ
 
 *************************************************/
-
-/*トップページ：基本初期設定　*/
-
-.colum1 main{ /*一旦、全ての余白を取る*/
-    margin: 0;
-    padding: 0;
-}
-
-.outer__inner {
-  margin: 0 auto;
-}
-
-section {
-  margin-bottom: 60px !important;
-}
-
-br {
-    display: none;
-}
-.top-wbox-u > * { /*フッダーの上の余白を取る*/
-    margin-bottom: 0;
-}
-
-/*
-
-カードスタイル&関連記事の共通設定
-
-*************************************************/
-.st-cardstyle .kanren dl, .st-cardstyle .kanren.st-cardbox dl:last-child{
-  border: none;
-}
-.st-cardstyle .kanren dl {
-    padding: 0;
-}
-.kanren-t{
-    width: 100% !important;
-    padding: 0 !important;
-}
-.kanren dd {
-padding-left: 0 !important;
-}
-
-.kanren dl {
-border-bottom-style: none !important;
-}
-.kanren dt {
-  width: 128px;
-  padding-right: 10px;
-  object-fit: cover;
-}
-
-.kanren dt img {
-  width: 100% !important;
-}
-
-/*トップページ：アフィンガー設定のおすすめ記事のデフォルト設定の上書き*/
-span.poprank-no{
-  display: none;
-}
-.pop-box, .nowhits .pop-box, .nowhits-eye .pop-box, .st-eyecatch + .nowhits .pop-box {
-  background: #fff !important;
-}
-
-
-/*トップページ：記事一覧&カードの横並び設定：既存の設定の上書き*/
-.row-box-article .kanren.shortcode-kanren {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap !important;
-    padding: 0;
-}
-.st-topcontent .row-box-article  .st-cardstyle .kanren dt img {
-    width: 100%!important;
-    height: 191px;
-    object-fit: cover;
-}
-.row-box-article .st-cardstyle .kanren dl {
-    width: 256px !important;
-}
-
-.btn-img--toallpage {
-    width: 28%;
-    margin: 0 auto;
-    margin-top: 23px;
-}
 
 /*トップページ：featured-contensバナー*/
   .featured-contens__box--img {
@@ -871,7 +879,7 @@ ul.profile-sns{
   margin-bottom: 25px !important;
 }
 
-/*サイド：記事一覧：AFFINGER管理「ヘッダー下おすすめ」 [st-osusume]*/
+/*サイド：ランキング記事一覧：AFFINGER管理「ヘッダー下おすすめ」 [st-osusume]*/
 
 .side .pop-box::before {
   content: url(./images/side__ranking-txt.svg);
@@ -881,7 +889,7 @@ ul.profile-sns{
   padding-bottom: 30px;
 }
 
-.home-post .side .kanren{
+.side .kanren{
   padding: 0;
 }
 
@@ -896,11 +904,6 @@ ul.profile-sns{
 
 .home-post .side .kanren .popular-t a{
   font-size: 14px !important;
-}
-
-/*サイド： タグ*/
-.widget_tag_cloud .st-widgets-title {
-  display: none;
 }
 
 /*
@@ -924,6 +927,13 @@ ul.profile-sns{
   width: 18%;
   padding-bottom: 30px;
 }
+
+/* ウェジットフッダー上コンテンツを表示しない場所 */
+.home #st-footer-under-widgets-box-wrap , .category #st-footer-under-widgets-box-wrap{
+  display: none;
+}
+
+
 
 /*
 
@@ -1101,9 +1111,6 @@ h2:not([class^="is-style-st-heading-custom-"]):not([class*=" is-style-st-heading
 }
 
 
-
-
-
 /*
 
 	カテゴリー一覧ページのレイアウト
@@ -1112,6 +1119,18 @@ h2:not([class^="is-style-st-heading-custom-"]):not([class*=" is-style-st-heading
 
 .category #st-header{
   display: none;
+}
+
+/* ヘッダー（木の）レイアウト */
+.category .title-bar-img {
+  width: 112px;
+  padding: 0 176px;
+}
+
+.category .title-bar{
+  position: absolute;
+  top: 64px;
+  left: 117px;
 }
 
 /* 一段（一位の記事）レイアウト */
@@ -1198,6 +1217,23 @@ h2:not([class^="is-style-st-heading-custom-"]):not([class*=" is-style-st-heading
   object-fit: cover;
 }
 
+.category .pages__container__area-top-post{
+  padding: 40px;
+}
+
+
+
+
+
+
+
+
+/*
+
+	タグ一覧ページのレイアウト
+
+*************************************************/
+
 /* ３段（featured-contentイラストのおすすめ）のレイアウト */
 
 .featured-contens__box--img {
@@ -1212,19 +1248,9 @@ h2:not([class^="is-style-st-heading-custom-"]):not([class*=" is-style-st-heading
     width: 926px;
 }
 
-/* ウェジットフッダー上『最新記事一覧』＆『おすすめ一覧』のレイアウト */
 
-#custom_html-15{
-  padding: 0 70px;
-}
 
-/* ウェジットフッダー上コンテンツを表示しない場所 */
-.home #st-footer-under-widgets-box-wrap{
-  display: none;
-}
-.single #st-footer-under-widgets-box-wrap #text-11{
-  display: none;
-}
+
 
 /* タグ＆カテゴリーページのウェジットフッダー上の余白を削除 */
 .archive #st-footer-under-widgets-box-wrap #st-header-under-widgets-box {
@@ -1255,55 +1281,8 @@ h2:not([class^="is-style-st-heading-custom-"]):not([class*=" is-style-st-heading
     text-align: left;
 }
 
-/*フッダー上の『おすすめ記事』のレイアウト修正*/
-
-#st-header-under-widgets-box .osusume-articles {
-      width: 900px;
-}
-
-#st-header-under-widgets-box .osusume-articles .p-entry-t{
-    display: none;
-}
 
 
-#st-header-under-widgets-box .osusume-articles{
-    width: 65%;
-}
-
-#st-header-under-widgets-box .osusume-articles .p-entry-t {
-    display: none;
-}
-
-#st-header-under-widgets-box .osusume-articles .kanren{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    border: none;
-    margin: 0;
-    padding: 0;
-}
-
-#st-header-under-widgets-box .osusume-articles .kanren dt {
-  width: auto;
-  float:none;
-}
-
-#st-header-under-widgets-box .osusume-articles .kanren dl {
-    border: none;
-    text-align: left;
-    word-break: normal;
-    width: 32%;
-}
-#st-header-under-widgets-box .osusume-articles .poprank-no {
-    display: none;
-}
-
-
-
-#st-header-under-widgets-box .st-widgets-title {
-      padding: 10px 0;
-}
 
 /*タグ&カテゴリー＆固定ページの共通レイアウト修正*/
 
