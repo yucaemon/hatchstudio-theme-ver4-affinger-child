@@ -107,7 +107,7 @@ Version: 20210719
     background-color: #ffecda;
     padding: 40px;
     margin: 0 calc(50% - 50vw);
-        margin-bottom: 50px;
+    margin-bottom: 50px;
   }
 
 /*
@@ -168,7 +168,44 @@ Version: 20210719
   border-bottom: solid 6px #f39800;
   /*下線色*/ }
 
-
+.btn{
+  display: inline-block;
+  font-weight: normal;
+  line-height: 1.25;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  transition: all 0.2s ease-in-out;
+}
+.original-btn .btn{
+box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+.original-btn .btn--orange, .original-btn .btn--orange a {
+  background-color: #f8bb86;
+  color: #fff;
+}
+.original-btn .btn-copy{
+  color: #333;
+  font-size: 0.7rem;
+  font-weight: bold;
+  position: relative;
+  margin-bottom: 0.2em;
+  text-align: center;
+  text-shadow: 1px 2px 3px #e4e4e4;
+}
+.original-btn .btn-copy:before {
+  margin-right: 0.7rem;
+  content: '＼';
+}
+.original-btn .btn-copy:after {
+  margin-left: 0.7rem;
+  content: '／';
+}
 /*
 
 ショートカットデザイン
@@ -620,6 +657,7 @@ header #st-menuwide nav.menu li a {
 color: #fff !important;
 }
 
+
 /*トップページ：記事一覧&カードの横並び設定 */
 .row-box-article .kanren.shortcode-kanren {
     display: flex;
@@ -721,6 +759,7 @@ border-bottom-style: none !important;
   width: 430px;
   padding-bottom: 60px;
   text-align: center;
+  margin: 0 auto;
 }
 
 .header__pic--logo .lamp__icon{
@@ -1109,6 +1148,72 @@ h2:not([class^="is-style-st-heading-custom-"]):not([class*=" is-style-st-heading
 .qar-contens__box__btn {
   padding-top: 35px;
 }
+/*
+
+	一覧ページのレイアウト(共通)
+
+*************************************************/
+
+.archive .header__pic{
+  display: none;
+}
+
+.archive .sub-title {
+  display: none;
+}
+
+.archive .outer__header.header {
+  margin: 27px 0;
+}
+
+
+.archive .header__pic--logo {
+  width: 319px;
+}
+
+.archive .cat-itiran{
+  background-color: #ffedb5;
+  margin: 0 calc(50% - 50vw);
+  margin-bottom: 50px;
+}
+
+.archive .cat-itiran .kanren:not(.st-cardbox) {
+  display: flex;
+  justify-content:space-around;
+  padding: 50px 75px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.archive .kanren::before{
+content:"";
+display: block;
+width:23%;
+order:1;
+}
+.archive .kanren::after{
+content:"";
+display: block;
+width:23%;
+}
+
+.archive .cat-itiran .kanren dl{
+width: 23%;
+}
+.archive .cat-itiran .kanren:not(.st-cardbox) dt {
+ width: 100%;
+ padding: 0;
+ float:none;
+ border: 9px solid #ffffff;
+ margin-bottom: 10px;
+}
+.archive .cat-itiran .kanren:not(.st-cardbox) dt img {
+width: 100%;
+height: 166px;
+object-fit: cover;
+}
+
+
 
 
 /*
@@ -1117,9 +1222,6 @@ h2:not([class^="is-style-st-heading-custom-"]):not([class*=" is-style-st-heading
 
 *************************************************/
 
-.category #st-header{
-  display: none;
-}
 
 /* ヘッダー（木の）レイアウト */
 .category .title-bar-img {
@@ -1133,28 +1235,25 @@ h2:not([class^="is-style-st-heading-custom-"]):not([class*=" is-style-st-heading
   left: 117px;
 }
 
-/* 一段（一位の記事）レイアウト */
+/* 一位の記事のレイアウト */
 .category .entry-content {
     margin-bottom: 70px;
 }
-
 .category #nocopy {
     text-align: center;
     margin-top: 30px;
 }
 
-.pages__container__title .title-bar {
-  margin: auto; }
-.pages__container__title .title-bar-img {
-    width: 100px; }
+
 .area-top-post__box-txt-pic {
   margin: 0 auto;
   width: 40px;
   padding-bottom: 5px; }
+
 .area-top-post__box-txt-p {
   margin: 0 auto;
-  width: 500px;
-  padding: 15px 44px;
+  width: 500px !important;
+  padding: 15px 44px !important;
   font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo UI", "メイリオ", Meiryo, sans-serif;
   color: #222;
   word-wrap: break-word;
@@ -1162,12 +1261,7 @@ h2:not([class^="is-style-st-heading-custom-"]):not([class*=" is-style-st-heading
   letter-spacing: .05em;
   line-height: 1.6;
  }
- .area-top-post__box-txt {
-    padding-top: 26px;
-    width: 400px;
-    margin-left: 20px;
- }
-
+ 
 .pic-frame-white img {
     display: block;
     object-fit: cover;
@@ -1183,46 +1277,12 @@ h2:not([class^="is-style-st-heading-custom-"]):not([class*=" is-style-st-heading
   padding: 0;
 }
 
-.category .post::before{
+.category .post:not(.st-header-content)::before {
   content: url(./images/area-page__lamp.svg);
   width: 50px;
   display: block;
   margin: 0 auto;
 }
-
-
-/* 二段（記事の一覧）のレイアウト */
-.category .cat-itiran {
-    background-color: #ffedb5;
-}
-.category .cat-itiran .kanren:not(.st-cardbox) {
-    display: flex;
-    width: 1100px;
-    margin: 0 auto;
-    flex-wrap: wrap;
-}
-.category .cat-itiran .kanren dl{
-  width: 246px;
-  margin-right: 29px;
-}
-.category .cat-itiran .kanren:not(.st-cardbox) dt {
-   width: 100%;
-   float:none;
-   border: 9px solid #ffffff;
-   margin-bottom: 10px;
-}
-.category .cat-itiran .kanren:not(.st-cardbox) dt img {
-  width: 100%;
-  height: 166px;
-  object-fit: cover;
-}
-
-.category .pages__container__area-top-post{
-  padding: 40px;
-}
-
-
-
 
 
 
