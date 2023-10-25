@@ -5,12 +5,10 @@ Description: AFFINGER6 対応
 Version: 20210719
 */
 
+
 /*media Queries 　スマートフォンとタブレットサイズ（959px以下）で適応したいCSS - スマホ・タブレット
 ---------------------------------------------------------------------------------------------------*/
-@media only screen and (max-width: 959px) {
 
-
-	/*-- ここまで -*/
 }
 
 /*media Queries タブレットサイズ（600px～959px）のみで適応したいCSS -タブレットのみ
@@ -109,6 +107,10 @@ Version: 20210719
     margin: 0 calc(50% - 50vw);
     margin-bottom: 50px;
   }
+
+.page .outer__inner {
+  width: 1100px;
+}
 
 /*
 
@@ -603,6 +605,10 @@ padding-right: 20px;
 	アフィンガー デフォルト設定の上書き:
 
 *************************************************/
+/*一面に表示する*/
+	#st-menuwide,#wrapper-in,#st-menuwide, #content-w,#content,#footer{
+    max-width:none !important;
+  }
 
 .colum1 main{ /*一旦、全ての余白を取る*/
     margin: 0;
@@ -630,12 +636,15 @@ span.poprank-no{
 .pop-box, .nowhits .pop-box, .nowhits-eye .pop-box, .st-eyecatch + .nowhits .pop-box {
   background: #fff !important;
 }
-
 .st-widgets-title::before {
   display: none;
 }
 #side .pop-box.kanren {
   margin-top: 0;
+}
+
+.page .blogbox{
+  display: none;
 }
 
 
@@ -719,8 +728,7 @@ border-bottom-style: none !important;
 /*文字をセンターにする(投稿ページ以外)*/
 .not-front-page:not(.single) h1.entry-title{
   text-align: center;
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
+
 }
 
 /*
@@ -1375,20 +1383,64 @@ object-fit: cover;
 
  /*
 
-	固定覧ページ（特定ページ：アメリカーんなものを食うなど）
+　特定ページ：アメリカーんなものを食うなど
 
 *************************************************/
 
-/*一番上のランキング３つの記事レイアウト*/
-
-.post__boxs__box {
-  width: 22%;
+/*固定ページのタイトル*/
+.page h1.entry-title {
+  background: #ffedb5 !important;
+  padding: 50px 0 !important;
+  margin-bottom: 0 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.post__boxs__box-txt-pic {
+
+/*タイトル横の画像（固定ページ毎に変わる画像）*/
+.post-61552 .entry-title::after {
+  content: url(./images/featured-page/featured-page__bad-food.svg);
+  width: 14%;
+}
+
+.post-33761 .entry-title::after {
+  content: url(./images/featured-page/featured-page__bad-food.svg);
+  width: 176px;
+  display: inline-block;
+  margin: 0 auto;
+  position: absolute;
+  right: 335px;
+}
+
+
+/*一番上のランキング３つの記事レイアウト*/
+.tag-related-article{
+  font-size: 25px;
+  font-weight: bold;
+  padding-bottom: 32px;
+
+}
+.ranking__boxs{
+  width: 68%;
+  justify-content: center;
+}
+.ranking__boxs__box {
+  width: 217px;
+  padding: 0 13px;
+}
+.ranking__boxs__box-txt-pic {
     display: block;
     margin: 0 auto;
     width: 17%;
+    padding-bottom: 10px;
 }
+
+.ranking__boxs__box-txt-p {
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  }
+
 
 /*共通レイアウト（プラグインList Category Postsのレイアウト）*/
 .lcp_catlist{
@@ -1413,7 +1465,7 @@ width:21%;
 }
 
 .lcp_catlist li{
-width: 21%;
+width: 28%;
 display: flex;
 flex-direction: column-reverse;
 padding: 30px 0;
@@ -1433,59 +1485,9 @@ padding: 30px 0;
 }
 
 
-/*おすすめタグの白帯一覧ページ種類（３段目）*/
-.container-tag {
-  background-color: #ffedb5 !important;
-  line-height: 130px !important;
-  margin-bottom: 50px;
-  }
-  
-  .container-tag__box{
-  width: 1180px;
-  padding-top: 40px;
-  height: 400px;
-  margin: 0 auto;
-  }
-  
-  .container-tag__pic{
-  position: relative;
-  }
-  .container-tag__pic-obi{
-  width: 100%;
-  background-color: #fff;
-  text-align: center;
-  margin: 0;
-  }
-  
-  .container-tag__box .container-tag__pic {
-    width: 255px;
-  }
-  .container-tag__pic img{
-    width: 100%;
-  }
 
-/*固定ページ（アメリカーんなものを食うページだけ）一覧のレイアウト修正*/
-.post-33700 .entry-title::after {
-    content: url(./images/featured-page/featured-page__bad-food.svg);
-    width: 176px;
-    display: inline-block;
-    margin: 0 auto;
-    position: absolute;
-    right: 335px;
-}
 
-.post-33761 .entry-title::after {
-    content: url(./images/featured-page/featured-page__bad-food.svg);
-    width: 176px;
-    display: inline-block;
-    margin: 0 auto;
-    position: absolute;
-    right: 335px;
-}
 
-.page .blogbox{
-  display: none;
-}
 
 /*固定ページ（プライベートページ）一覧のレイアウト修正*/
 .page .st-eyecatch-under{
