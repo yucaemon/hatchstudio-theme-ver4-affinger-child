@@ -73,44 +73,54 @@ Version: 20210719
     justify-content: space-around; }
   .flexbox--streach {
     align-items: stretch; }
-
-  .zigzag-pink {
-      position: relative;
-      background: #ffecda;
-      margin-bottom: 100px;
-  }
-  .zigzag-pink::after {
-      bottom: -20px;
-      background: linear-gradient(135deg, #ffecda 10px, transparent 0), linear-gradient(225deg, #ffecda 10px, transparent 0);
-      background-size: 20px 20px;
-  }
-  .zigzag::after {
-      height: 20px;
-      content: "";
-      position: absolute;
-      left: 0;
-      width: 100%;
-  }
-
-  .zigzag-yellow {
-      position: relative;
-      background: #ffedb5;
-      margin-bottom: 100px;
-  }
-
-  img:not(.size-st_header_slider), video, object{
-        max-width: 100%;
-  }
-  .wide-obi{
-    background-color: #ffecda;
-    padding: 40px;
-    margin: 0 calc(50% - 50vw);
-    margin-bottom: 50px;
-  }
-
-.page .outer__inner {
-  width: 1100px;
+ 
+#content {
+  width: 1205px !important;
+  margin: 0 auto !important;
+  padding: 40px 0 !important;
 }
+
+.wide-obi{
+  background-color: #ffecda;
+  padding: 40px;
+  margin: 0 calc(50% - 50vw);
+  margin-bottom: 50px;
+}   
+
+.entry-content > div {
+  margin-bottom: 75px;
+}
+
+.zigzag-pink {
+  position: relative;
+  background: #ffecda;
+  margin-bottom: 100px;
+}
+.zigzag-pink::after {
+  bottom: -20px;
+  background: linear-gradient(135deg, #ffecda 10px, transparent 0), linear-gradient(225deg, #ffecda 10px, transparent 0);
+  background-size: 20px 20px;
+}
+.zigzag::after {
+  height: 20px;
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+.zigzag-yellow {
+  position: relative;
+  background: #ffedb5;
+  margin-bottom: 100px;
+}
+
+img:not(.size-st_header_slider), video, object{
+    max-width: 100%;
+}
+
+
+
+
 
 /*
 
@@ -183,6 +193,11 @@ Version: 20210719
   font-size: 1rem;
   border-radius: 0.25rem;
   transition: all 0.2s ease-in-out;
+}
+
+.original-btn {
+  text-align: center;
+  padding-top: 15px;
 }
 .original-btn .btn{
 box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
@@ -608,15 +623,12 @@ padding-right: 20px;
 /*一面に表示する*/
 	#st-menuwide,#wrapper-in,#st-menuwide, #content-w,#content,#footer{
     max-width:none !important;
+    padding: 0 !important;
   }
 
 .colum1 main{ /*一旦、全ての余白を取る*/
     margin: 0;
     padding: 0;
-}
-
-.outer__inner {
-  margin: 0 auto;
 }
 
 section {
@@ -1224,6 +1236,7 @@ h2:not([class^="is-style-st-heading-custom-"]):not([class*=" is-style-st-heading
 .pages__container__area-top-post{
   margin: 0 auto;
   padding: 30px 0;
+  margin: 0 calc(50% - 50vw);
 }
 
 .archive .header__pic{
@@ -1383,7 +1396,7 @@ object-fit: cover;
 
  /*
 
-　特定ページ：アメリカーんなものを食うなど
+　特定ページ：アメリカーンなものを食うなど
 
 *************************************************/
 
@@ -1395,6 +1408,7 @@ object-fit: cover;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 calc(50% - 50vw);
 }
 
 /*タイトル横の画像（固定ページ毎に変わる画像）*/
@@ -1423,6 +1437,7 @@ object-fit: cover;
 .ranking__boxs{
   width: 68%;
   justify-content: center;
+  margin: 0 auto;
 }
 .ranking__boxs__box {
   width: 217px;
@@ -1446,26 +1461,13 @@ object-fit: cover;
 .lcp_catlist{
   display: flex;
   justify-content:space-around;
-  padding: 25px 75px;
-  margin: 0 auto;
   flex-wrap: wrap;
-}
-
-.lcp_catlist::before{
-content:"";
-display: block;
-width:21%;
-order:1;
-}
-
-.lcp_catlist::after{
-content:"";
-display: block;
-width:21%;
+  margin: 0;
+  padding: 0;
 }
 
 .lcp_catlist li{
-width: 28%;
+  width: 21% !important;
 display: flex;
 flex-direction: column-reverse;
 padding: 30px 0;
@@ -1484,7 +1486,18 @@ padding: 30px 0;
   object-fit: cover;
 }
 
-
+.lcp_catlist::before{
+  content:"";
+  display: block;
+  width:21%;
+  order:1;
+  }
+  
+  .lcp_catlist::after{
+  content:"";
+  display: block;
+  width:21%;
+  }
 
 
 
