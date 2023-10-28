@@ -118,8 +118,71 @@ img:not(.size-st_header_slider), video, object{
     max-width: 100%;
 }
 
+/*
 
+	アフィンガー デフォルト設定の上書き:
 
+*************************************************/
+/*一面に表示する*/
+#st-menuwide,#wrapper-in,#st-menuwide, #content-w,#content,#footer{
+  max-width:none !important;
+  padding: 0 !important;
+}
+
+.colum1 main{ /*一旦、全ての余白を取る*/
+  margin: 0;
+  padding: 0;
+}
+
+section {
+margin-bottom: 60px !important;
+}
+
+br {
+  display: none;
+}
+.top-wbox-u > * { /*フッダーの上の余白を取る*/
+  margin-bottom: 0;
+}
+
+span.poprank-no{
+display: none;
+}
+.pop-box, .nowhits .pop-box, .nowhits-eye .pop-box, .st-eyecatch + .nowhits .pop-box {
+background: #fff !important;
+}
+.st-widgets-title::before {
+display: none;
+}
+#side .pop-box.kanren {
+margin-top: 0;
+}
+
+.page .blogbox{
+display: none;
+}
+
+/*メニューバー*/
+#st-header {
+min-height: 0 !important;
+}
+#st-menubox {
+padding-top: 0 !important;
+}
+#st-headerbox .st-header-content {
+padding: 0 !important;
+}
+#st-menuwide {
+margin-bottom: 50px;
+}
+
+header #st-menuwide nav.menu li a {
+color: #fff !important;
+}
+
+.page .st-eyecatch-under{
+display: none;
+}
 
 
 /*
@@ -615,68 +678,7 @@ background: #f31333;
 padding-right: 20px;
 }
 
-/*
 
-	アフィンガー デフォルト設定の上書き:
-
-*************************************************/
-/*一面に表示する*/
-	#st-menuwide,#wrapper-in,#st-menuwide, #content-w,#content,#footer{
-    max-width:none !important;
-    padding: 0 !important;
-  }
-
-.colum1 main{ /*一旦、全ての余白を取る*/
-    margin: 0;
-    padding: 0;
-}
-
-section {
-  margin-bottom: 60px !important;
-}
-
-br {
-    display: none;
-}
-.top-wbox-u > * { /*フッダーの上の余白を取る*/
-    margin-bottom: 0;
-}
-
-span.poprank-no{
-  display: none;
-}
-.pop-box, .nowhits .pop-box, .nowhits-eye .pop-box, .st-eyecatch + .nowhits .pop-box {
-  background: #fff !important;
-}
-.st-widgets-title::before {
-  display: none;
-}
-#side .pop-box.kanren {
-  margin-top: 0;
-}
-
-.page .blogbox{
-  display: none;
-}
-
-
-/*メニューバー*/
-#st-header {
-  min-height: 0 !important;
-}
-#st-menubox {
-  padding-top: 0 !important;
-}
-#st-headerbox .st-header-content {
-  padding: 0 !important;
-}
-#st-menuwide {
-margin-bottom: 50px;
-}
-
-header #st-menuwide nav.menu li a {
-color: #fff !important;
-}
 
 
 /*トップページ：記事一覧&カードの横並び設定 */
@@ -1258,7 +1260,7 @@ h2:not([class^="is-style-st-heading-custom-"]):not([class*=" is-style-st-heading
 
 /*記事一覧の横レイアウト*/
 
-.archive aside:not(.section aside){
+.archive aside:not(.section aside),.page .archive.kanren{
   background-color: #ffedb5 !important;
   margin: 0 calc(50% - 50vw) !important;
   text-align: center !important;
@@ -1266,7 +1268,7 @@ h2:not([class^="is-style-st-heading-custom-"]):not([class*=" is-style-st-heading
 }
 
 /*記事一覧の黄色い枠のギザギザ*/
-.archive aside:not(.section aside){
+.archive aside:not(.section aside),.page .archive.kanren{
   background: linear-gradient(-135deg, #ffedb5 15px, transparent 0) 0 16px, linear-gradient(135deg, #ffedb5 15px, #fff 0) 0 20px;
   background-position: left bottom !important;
   background-repeat: repeat-x !important;
@@ -1290,7 +1292,7 @@ h2:not([class^="is-style-st-heading-custom-"]):not([class*=" is-style-st-heading
   transition: all 0.2s ease-in-out;
 }
 
-.archive .kanren:not(.section .kanren){
+.archive .kanren:not(.section .kanren),.page .archive.kanren{
   display: flex;
   justify-content:space-around;
   padding: 25px 75px;
@@ -1310,11 +1312,11 @@ display: block;
 width:21%;
 }
 
-.archive .kanren:not(.section .kanren) dl{
+.archive .kanren:not(.section .kanren) dl,.page .archive.kanren li{
 width: 21%;
 }
 
-.archive .kanren:not(.section .kanren) dt{
+.archive .kanren:not(.section .kanren) dt,.page .archive.kanren li a img{
  width: 100%;
  padding: 0;
  float:none;
@@ -1322,7 +1324,7 @@ width: 21%;
  margin-bottom: 10px;
 }
 
-.archive .kanren:not(.section .kanren) dt img{
+.archive .kanren:not(.section .kanren) dt img,.page .archive.kanren li img{
 width: 100%;
 height: 166px;
 object-fit: cover;
@@ -1461,6 +1463,7 @@ object-fit: cover;
 .lcp_catlist{
   display: flex;
   justify-content:space-around;
+  align-items: flex-start;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
@@ -1500,43 +1503,35 @@ padding: 30px 0;
   }
 
 
+/*
 
+　固定ページ（プライベートページ）
 
-/*固定ページ（プライベートページ）一覧のレイアウト修正*/
-.page .st-eyecatch-under{
-  display: none;
+*************************************************/ 
+
+/*黄色の帯の部分*/
+.yellow-obi {
+  background-color: #ffcf6e;
+  text-align: center;
+  color: #fff;
+  padding: 12px 0;
+  font-size: .8em;
+  letter-spacing: 1.2px;
+  font-weight: bold;
+  margin: 0 calc(50% - 50vw) !important;
 }
 
-.private-obi {
-    background-color: #ffd668;
-    line-height: 36px;
-    color: #fff;
-    text-align: center;
-    font-weight: bold;
+/*マイナスマークの部分*/
+.post-61550 .entry-title::after,.post-61550 .entry-title::before{
+  content: url(./images/private-page/private-page__mark.jpg);
+  width: 59px;
+  padding:0 10px;
 }
 
-.post-33773 .entry-title::after,.post-33773 .entry-title::before{
-    content: url(./images/private-page/private-page__mark.jpg);
-    width: 176px;
-    padding:0 10px;
-}
+/*会員登録*/
 
-.post-33773 .entry-content > div{
-      margin-bottom: 0;
-}
 
-.private__container__articles{
-    background-color: #ffedb5 !important;
-}
-.private__container__articles ul#lcp_instance_0{
-  margin: 0 auto;
-}
 
-.private__container__articles ul#lcp_instance_0 img{    border: 9px solid #ffffff;
-    margin-bottom: 10px;
-}
-
-/*固定ページ（限定ページ）一覧のレイアウト修正*/
 
 #wpmem_login legend, #wpmem_reg legend {
     background-color: #ede2ad6e;
@@ -1590,6 +1585,11 @@ padding: 30px 0;
   text-decoration-color: #ffecda;
   text-underline-offset: 15px;
 }
+
+
+
+
+
 
 /*
 
