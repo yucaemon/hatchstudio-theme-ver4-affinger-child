@@ -1529,9 +1529,9 @@ padding: 30px 0;
 }
 
 /*会員登録*/
-
-
-
+#wpmem_reg {
+  margin-top: 20px;
+}
 
 #wpmem_login legend, #wpmem_reg legend {
     background-color: #ede2ad6e;
