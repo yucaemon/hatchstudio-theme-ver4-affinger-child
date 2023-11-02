@@ -1532,7 +1532,6 @@ padding: 30px 0;
 #wpmem_reg {
   margin-top: 20px;
 }
-
 #wpmem_login legend, #wpmem_reg legend {
     background-color: #ede2ad6e;
     padding: 38px;
@@ -1572,22 +1571,10 @@ padding: 30px 0;
     width: 100% !important;
     padding: 45px 0 !important;
 }
-
-.page-id-33824 .page h1.entry-title{
+/*すでにログインしている場合のログアウト＆名前の表示を消す*/
+p.register_status, ul.register_links{
   display: none;
 }
-
-.page-id-33824 .qar-contens__box{
-  display: none;
-}
-.lcp_catlist--title{
-  text-decoration: underline;
-  text-decoration-color: #ffecda;
-  text-underline-offset: 15px;
-}
-
-
-
 
 
 
@@ -1597,49 +1584,20 @@ padding: 30px 0;
 
 *************************************************/
 
-.contact-form .outer__inner {
-  width: 600px;
-}
-.contact-form .form-group.row {
-    padding: 10px 0;
+/*デフォルトの質問のヘッダーを消す*/
+.post-61548 h1.entry-title {
+  display: none !important;
 }
 
-.contact-form button {
-    margin: 18px auto;
-    padding: 17px;
-    background: #fba38f;
-    color: #fff;
-    display: block;
-    border: none;
-}
-
-.contact-form button:hover {
-  text-decoration: underline;
+/*グーグルお問い合わせフォーム*/
+.contact-form {
+  margin: 0 auto;
+  width: 800px;
+  overflow: visible !important;
 }
 
 
-.contact-form .contact-form__header {
-    background-color: #f6cdc4;
-    height: 144px;
-    padding-left: 40px;
-    font-size: 20px;
-    font-size: 2rem;
-    line-height: 1;
-    letter-spacing: 1px;
-    line-height: 4.4;
-    color: #fff; }
-    .contact-form__header--jp {
-      height: 19px;
-      padding: 0;
-      font-size: 22px;
-      color: #ffffff;
-      font-family: "Montserrat", "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo UI", "メイリオ", Meiryo, sans-serif; }
-    .contact-form__header--en {
-      font-size: 30px;
-      font-size: 3rem;
-      line-height: 1;
-      line-height: 3;
-      font-family: "Montserrat", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif; }
+
 
 /*
 
@@ -1683,7 +1641,6 @@ padding: 30px 0;
   flex-flow: wrap;
 }
 
-
 .search-results article .kanren::after {
     content: "";
     display:block;
@@ -1695,7 +1652,6 @@ padding: 30px 0;
     width:275px; /* 子要素と同じ幅 */
     order: 1; /* アイテムの並び順 */
 }
-
 
 .search-results article .kanren dl {
     border: none;
