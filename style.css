@@ -1576,8 +1576,6 @@ p.register_status, ul.register_links{
   display: none;
 }
 
-
-
 /*
 
 お問い合わせフォーム
@@ -1596,9 +1594,6 @@ p.register_status, ul.register_links{
   overflow: visible !important;
 }
 
-
-
-
 /*
 
 404ページ
@@ -1609,25 +1604,23 @@ p.register_status, ul.register_links{
   margin: 0 auto;
   padding: 40px 0 !important;
 }
-
-.error404 .entry-title{
-    font-size: 47px !important;
-    color: #adadad !important;
+.error404 h1.entry-title {
+  display: none;
 }
-
 .error404 .textwidget.custom-html-widget{
     text-align: center;
 }
 
-.error404  img{
-    width: 265px;
-    padding-bottom: 25px;
+.error404 .notfind__header img{
+  width: 20%;
+  padding-bottom: 13px;
 }
 
-.error404 #search-4{
-    width: 500px;
-    margin: 0 auto;
+.error404 .notfind__body__img img{
+  width: 16%;
+  padding: 20px 0;
 }
+
 
   /*
 
