@@ -679,8 +679,6 @@ padding-right: 20px;
 }
 
 
-
-
 /*トップページ：記事一覧&カードの横並び設定 */
 .row-box-article .kanren.shortcode-kanren {
     display: flex;
@@ -1259,8 +1257,7 @@ h2:not([class^="is-style-st-heading-custom-"]):not([class*=" is-style-st-heading
 }
 
 /*記事一覧の横レイアウト*/
-
-.archive aside:not(.section aside),.page .archive.kanren{
+.archive aside:not(.section aside),.page .archive.kanren,.search-results article .kanren{
   background-color: #ffedb5 !important;
   margin: 0 calc(50% - 50vw) !important;
   text-align: center !important;
@@ -1268,7 +1265,7 @@ h2:not([class^="is-style-st-heading-custom-"]):not([class*=" is-style-st-heading
 }
 
 /*記事一覧の黄色い枠のギザギザ*/
-.archive aside:not(.section aside),.page .archive.kanren{
+.archive aside:not(.section aside),.page .archive.kanren,.search-results article .kanren{
   background: linear-gradient(-135deg, #ffedb5 15px, transparent 0) 0 16px, linear-gradient(135deg, #ffedb5 15px, #fff 0) 0 20px;
   background-position: left bottom !important;
   background-repeat: repeat-x !important;
@@ -1621,14 +1618,19 @@ p.register_status, ul.register_links{
   padding: 20px 0;
 }
 
+/*
 
-  /*
+検索結果ページ
 
-  検索結果ページ
+*************************************************/
 
-  *************************************************/
+.search-results h1.entry-title {
+  padding: 43px 0 !important;
+}
+
 .search-results article .kanren{
-  padding: 0 70px;
+  padding: 50px 70px;
+  margin-bottom: 50px !important;
   display: flex;
   justify-content: space-around;
   flex-flow: wrap;
@@ -1662,6 +1664,3 @@ p.register_status, ul.register_links{
     width: 100% !important;
 }
 
-.search-results article .kanren:not(.st-cardbox) dd h3 {
-  padding-top: 10px;
-}
