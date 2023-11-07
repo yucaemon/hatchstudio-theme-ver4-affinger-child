@@ -1624,8 +1624,12 @@ p.register_status, ul.register_links{
 
 *************************************************/
 
-.search-results h1.entry-title {
+.search h1.entry-title {
   padding: 43px 0 !important;
+}
+
+.search-no-results .kanren{
+  display: none;
 }
 
 .search-results article .kanren{
