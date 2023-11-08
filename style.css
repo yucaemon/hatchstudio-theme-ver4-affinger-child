@@ -8,8 +8,11 @@ Version: 20210719
 
 /*media Queries 　スマートフォンとタブレットサイズ（959px以下）で適応したいCSS - スマホ・タブレット
 ---------------------------------------------------------------------------------------------------*/
+@media only screen and (max-width: 959px) {
+
 
 }
+
 
 /*media Queries タブレットサイズ（600px～959px）のみで適応したいCSS -タブレットのみ
 ---------------------------------------------------------------------------------------------------*/
@@ -38,13 +41,48 @@ Version: 20210719
 /*media Queries スマホサイズ（599px）以下で適応したいCSS - スマホのみ
 ---------------------------------------------------------------------------------------------------*/
 @media print, screen and (max-width: 599px) {
-  .header__pic {
-    width: 42% !important;
+#s-navi dt.trigger {
+  display: none;
+}
+
+.background-draw {
+  width: 33%;
+}
+.header__pic--logo {
+  width: 100%;
+  padding-bottom: 0;
+  margin: 0 auto;
+}
+
+.background-draw{
+  display: none;
+}
+.side{
+  display: none;
+}
+.sns-icons {
+  display: none !important;
+}
+.search__form{
+  display: none;
+}
+
+.kanren dl {
+  width: 48% !important;
+}
+
+.st-cardstyle .kanren dt img {
+  height: 28vh !important;
+}
+
+.featured-contens__box--img {
+  width: 46% !important;
+  padding: 10px 0 !important;
 }
 
 
-	/*-- ここまで --*/
 }
+
 /*
 
 レイアウト
@@ -75,9 +113,16 @@ Version: 20210719
     align-items: stretch; }
  
 #content {
-  width: 1205px !important;
+  width: 100% !important;
   margin: 0 auto !important;
   padding: 40px 0 !important;
+}
+#contentInner {
+  padding-top: 50px !important;
+}
+
+.entry-content {
+  padding: 1% 8%;
 }
 
 .wide-obi{
@@ -688,11 +733,11 @@ padding-right: 20px;
 }
 .st-topcontent .row-box-article  .st-cardstyle .kanren dt img {
     width: 100%!important;
-    height: 191px;
+    height: 38vh;
     object-fit: cover;
 }
 .row-box-article .st-cardstyle .kanren dl {
-    width: 256px !important;
+    width: 30% ;
 }
 
 .btn-img--toallpage {
@@ -776,6 +821,7 @@ border-bottom-style: none !important;
 .outer__header.header {
   margin: 20px auto 0 auto;
 }
+
 .header .search__form{
     width: 25%;
 }
@@ -788,6 +834,13 @@ border-bottom-style: none !important;
 }
 .sns-icons__icon img {
  padding: 0;
+}
+.header__pic--logo .logo__img::before {
+  content: url(./images/area-page__lamp.svg);
+  display: block;
+  margin: 0 auto;
+  width: 45px;
+  padding-bottom: 12px;
 }
 .header__pic {
   width: auto;
