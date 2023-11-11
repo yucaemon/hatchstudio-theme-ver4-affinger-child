@@ -38,50 +38,6 @@ Version: 20210719
 	/*-- ここまで --*/
 }
 
-/*media Queries スマホサイズ（599px）以下で適応したいCSS - スマホのみ
----------------------------------------------------------------------------------------------------*/
-@media print, screen and (max-width: 599px) {
-#s-navi dt.trigger {
-  display: none;
-}
-
-.background-draw {
-  width: 33%;
-}
-.header__pic--logo {
-  width: 100%;
-  padding-bottom: 0;
-  margin: 0 auto;
-}
-
-.background-draw{
-  display: none;
-}
-.side{
-  display: none;
-}
-.sns-icons {
-  display: none !important;
-}
-.search__form{
-  display: none;
-}
-
-.kanren dl {
-  width: 48% !important;
-}
-
-.st-cardstyle .kanren dt img {
-  height: 28vh !important;
-}
-
-.featured-contens__box--img {
-  width: 46% !important;
-  padding: 10px 0 !important;
-}
-
-
-}
 
 /*
 
@@ -1721,3 +1677,84 @@ p.register_status, ul.register_links{
     width: 100% !important;
 }
 
+/*media Queries スマホサイズ（599px）以下で適応したいCSS - スマホのみ
+---------------------------------------------------------------------------------------------------*/
+@media print, screen and (max-width: 599px) {
+  #s-navi dt.trigger {
+    display: none;
+  }
+  
+  .background-draw {
+    width: 33%;
+  }
+  .header__pic--logo {
+    width: 100%;
+    padding-bottom: 0;
+    margin: 0 auto;
+  }
+  
+  .background-draw{
+    display: none;
+  }
+
+  .sns-icons {
+    display: none;
+  }
+  .search__form{
+    display: none;
+  }
+  
+  .kanren dl {
+    width: 48% !important;
+  }
+  
+  
+  .st-cardstyle .kanren dt img {
+    height: 28vh ;
+  }
+  
+  .featured-contens__box--img {
+    width: 46% ;
+    padding: 10px 0 ;
+  }
+  
+.qar-contens__box-small .qar-contens__box__txt {
+  width: 83% ;
+  
+}
+.qar-contens__box-small .qar-contens__box__character {
+  width: 43% ;
+  padding-top: 28px ;
+  margin: 0 auto ;
+}
+.area-list {
+  width: 100% ;
+}
+.area-list-body {
+  display: none;
+}
+.area-list-title {
+border-bottom: 1px #fff solid;
+}
+.area-list + .area-list {
+margin-left: 0; 
+}
+
+.area-contens__img {
+  width: 62%;
+  padding-bottom: 10px;
+  margin: 0 auto;
+}
+.responbox70{
+  display: initial;
+  flex-direction: inherit;
+}
+
+.home-post .side .kanren dl {
+  display: inherit;
+  width: 50% !important;
+}
+
+
+  
+}
