@@ -1717,13 +1717,31 @@ p.register_status, ul.register_links{
     width: 46% ;
     padding: 10px 0 ;
   }
-  
+
+.top-wbox-u {
+    padding: 0; 
+} 
+.qar-contens__box {
+  background-color: #ffecda;
+  padding: 25px 0;
+}
+.qar-contens__box__txt--img-top,.qar-contens__box__txt--img-btm{
+  display: none;
+}
 .qar-contens__box-small .qar-contens__box__txt {
   width: 83% ;
-  
+  order: 2;
+}
+.qar-contens__box__txt--mid{
+  font-size: 23px;
+  padding: 10px 0;
+}
+
+.qar-contens__box__btn {
+  padding-top: 0;
 }
 .qar-contens__box-small .qar-contens__box__character {
-  width: 43% ;
+  width: 40% ;
   padding-top: 28px ;
   margin: 0 auto ;
 }
@@ -1755,6 +1773,44 @@ margin-left: 0;
   width: 50% !important;
 }
 
+.entry-content {
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.side{
+  padding: 0 0;
+  margin: 0 calc(50% - 50vw);
+  margin-bottom: 0;
+}
+
+.st-author-box{
+ display:none;
+}
+
+.kanren.pop-box {
+  background-color: #fff5d0 !important;
+  padding: 0 !important;
+  margin: 0;
+}
+.side::before {
+  content: '24時間以内に人気';
+  background-color: #ffdfa8;
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 19px;
+  display: block;
+}
+
+.st-topcontent{
+  margin: 0 !important;
+}
+
+.featured-contens__box{
+  margin: 0;
+  background-color: #ffdab7;
+}
 
   
 }
