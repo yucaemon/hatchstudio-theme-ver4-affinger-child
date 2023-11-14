@@ -681,7 +681,7 @@ padding-right: 20px;
 
 
 /*トップページ：記事一覧&カードの横並び設定 */
-.row-box-article .kanren.shortcode-kanren {
+.kanren {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap !important;
@@ -689,7 +689,6 @@ padding-right: 20px;
 }
 .st-topcontent .row-box-article  .st-cardstyle .kanren dt img {
     width: 100%!important;
-    height: 38vh;
     object-fit: cover;
 }
 .row-box-article .st-cardstyle .kanren dl {
@@ -1680,50 +1679,119 @@ p.register_status, ul.register_links{
 /*media Queries スマホサイズ（599px）以下で適応したいCSS - スマホのみ
 ---------------------------------------------------------------------------------------------------*/
 @media print, screen and (max-width: 599px) {
-  #s-navi dt.trigger {
-    display: none;
-  }
-  
-  .background-draw {
-    width: 33%;
-  }
-  .header__pic--logo {
-    width: 100%;
-    padding-bottom: 0;
-    margin: 0 auto;
-  }
-  
-  .background-draw{
-    display: none;
-  }
 
-  .sns-icons {
-    display: none;
-  }
-  .search__form{
-    display: none;
-  }
-  
-  .kanren dl {
-    width: 48% !important;
-  }
-  
-  
-  .st-cardstyle .kanren dt img {
-    height: 28vh ;
-  }
-  
-  .featured-contens__box--img {
-    width: 46% ;
-    padding: 10px 0 ;
-  }
+ /*
 
+トップページ
+
+***************/
+
+#s-navi dt.trigger {
+  display: none;
+}
 .top-wbox-u {
-    padding: 0; 
+  padding: 0; 
 } 
+.entry-content {
+  margin-bottom: 0;
+  padding: 0;
+}
+.st-topcontent{
+  margin: 0 !important;
+}
+section {
+  margin: 0 !important;
+}
+
+  /*ヘッダー*/
+.background-draw {
+  width: 33%;
+}
+.header__pic--logo {
+  width: 100%;
+  padding-bottom: 0;
+  margin: 0 auto;
+}
+.background-draw{
+  display: none;
+}
+.sns-icons {
+  display: none;
+}
+.search__form{
+  display: none;
+}
+
+ /*新着記事*/
+ .st-topcontent::before {
+  content: '新着記事';
+  background-color: #f9b19d;
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 19px;
+  display: block;
+  margin-bottom: 30px;
+  color: #fff;
+}
+.kanren{
+  padding:0 20px;
+  }
+  .kanren dl {
+  width: 48% !important;
+}
+.kanren dt img {
+  height: 140px !important;
+}
+.st-author-box{
+display:none;
+}
+
+/*24H記事*/ 
+.side{
+  padding: 0 0;
+  margin: 0 calc(50% - 50vw);
+  margin-bottom: 0;
+}
+.responbox70{
+  display: initial;
+  flex-direction: inherit;
+}
+.home-post .side .kanren dl {
+  display: block;
+  width: 48% !important;
+}
+.kanren.pop-box {
+  background-color: #fff5d0 !important;
+  margin: 0;
+}
+.side::before {
+  content: '24時間以内に人気';
+  background-color: #ffdfa8;
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 19px;
+  display: block;
+}
+.side .pop-box::before{
+  content: none;
+}
+.featured-contens__box{
+  margin: 0;
+  background-color: #ffdab7;
+}
+
+/*イラスト４つ*/ 
+.featured-contens__box--img {
+  width: 46% ;
+  padding: 10px 0 ;
+}
+
+/*ネタ募集中*/ 
 .qar-contens__box {
   background-color: #ffecda;
-  padding: 25px 0;
+  padding: 40px 0 55px 0;
 }
 .qar-contens__box__txt--img-top,.qar-contens__box__txt--img-btm{
   display: none;
@@ -1736,20 +1804,21 @@ p.register_status, ul.register_links{
   font-size: 23px;
   padding: 10px 0;
 }
-
 .qar-contens__box__btn {
   padding-top: 0;
 }
 .qar-contens__box-small .qar-contens__box__character {
-  width: 40% ;
+  width: 29% ;
   padding-top: 28px ;
   margin: 0 auto ;
 }
+
+/*今まで住んだところ*/ 
 .area-list {
-  width: 100% ;
+width: 100% ;
 }
 .area-list-body {
-  display: none;
+display: none;
 }
 .area-list-title {
 border-bottom: 1px #fff solid;
@@ -1757,60 +1826,10 @@ border-bottom: 1px #fff solid;
 .area-list + .area-list {
 margin-left: 0; 
 }
-
 .area-contens__img {
-  width: 62%;
-  padding-bottom: 10px;
-  margin: 0 auto;
+width: 62%;
+padding-bottom: 10px;
+margin: 0 auto;
 }
-.responbox70{
-  display: initial;
-  flex-direction: inherit;
-}
-
-.home-post .side .kanren dl {
-  display: inherit;
-  width: 50% !important;
-}
-
-.entry-content {
-  margin-bottom: 0;
-  padding: 0;
-}
-
-.side{
-  padding: 0 0;
-  margin: 0 calc(50% - 50vw);
-  margin-bottom: 0;
-}
-
-.st-author-box{
- display:none;
-}
-
-.kanren.pop-box {
-  background-color: #fff5d0 !important;
-  padding: 0 !important;
-  margin: 0;
-}
-.side::before {
-  content: '24時間以内に人気';
-  background-color: #ffdfa8;
-  text-align: center;
-  width: 100%;
-  padding: 10px 0;
-  font-size: 19px;
-  display: block;
-}
-
-.st-topcontent{
-  margin: 0 !important;
-}
-
-.featured-contens__box{
-  margin: 0;
-  background-color: #ffdab7;
-}
-
   
 }
