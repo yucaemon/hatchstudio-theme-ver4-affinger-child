@@ -766,8 +766,6 @@ border-bottom-style: none !important;
 }
 
 
-
-
 /*
 
 	ヘッダー
@@ -1125,7 +1123,6 @@ h2:not([class^="is-style-st-heading-custom-"]):not([class*=" is-style-st-heading
 
 
 /*投稿ページ：下： (最新記事）＆（おすすめ記事)のタイトルのレイアウト修正：*/
-
 .st-widgets-box h3,.st-widgets-title{
   background: #ffede9 !important;
   color: #737373 !important;
@@ -1844,9 +1841,7 @@ margin: 0 auto;
   z-index: 90;
   background-color: #f9b19d;
 }
-.menu-btn span,
-.menu-btn span:before,
-.menu-btn span:after {
+.menu-btn span,.menu-btn span:before,.menu-btn span:after {
   content: '';
   display: block;
   height: 3px;
@@ -1922,6 +1917,7 @@ margin: 0 auto;
   background-color: #f9b19d;
   transition: all 0.5s;/*アニメーション設定*/
 }
+
 #menu-btn-check:checked ~ .menu-content {
   right: 0;/*メニューを画面内へ*/
 }
