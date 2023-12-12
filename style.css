@@ -970,6 +970,12 @@ p.st-author-description {
 }
 
 /*サイド：プロフィール下SNSアイコン：*/
+
+.st-author-profile-avatar{
+  display: none;
+}
+
+
 ul.profile-sns{
   background-color: #fff298;
   height: 65px;
@@ -981,6 +987,13 @@ ul.profile-sns{
 }
 .st-author-profile .sns {
   margin-bottom: 25px !important;
+}
+
+p.st-author-description:after {
+  content: "プロフィールはこちら";
+  font-size: 13px;
+  font-weight: bold;
+  border-bottom: 7px solid #fff08c;
 }
 
 /*サイド：ランキング記事一覧：AFFINGER管理「ヘッダー下おすすめ」 [st-osusume]*/
