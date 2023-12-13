@@ -45,6 +45,7 @@ Version: 20210719
 
 *************************************************/
 
+
 .flexbox, .flexbox--start, .flexbox--h-center, .flexbox--h-bottom, .flexbox--v-center, .flexbox--v-bottom, .flexbox--spacebetween, .flexbox--spacearound, .flexbox--streach {
   display: flex;
   display: -webkit-flex;
@@ -67,25 +68,27 @@ Version: 20210719
     justify-content: space-around; }
   .flexbox--streach {
     align-items: stretch; }
- 
+
+  html.s-navi-search-overlay {
+    margin: 0 20px;
+}
+
 #content {
   width: 100% !important;
   margin: 0 auto !important;
   padding: 40px 0 !important;
 }
 #contentInner {
-  padding-top: 50px !important;
-}
-
-.entry-content {
-  padding: 1% 8%;
+  float: none !important;
+  padding-top: 25px !important;
+  width: 1306px !important;
+  margin: 0 auto !important;
 }
 
 .wide-obi{
   background-color: #ffecda;
-  padding: 40px;
-  margin: 0 calc(50% - 50vw);
-  margin-bottom: 50px;
+  margin: 0 calc(50% - 50vw) !important;
+  margin-bottom: 40px !important;
 }   
 
 .entry-content > div {
@@ -127,7 +130,7 @@ img:not(.size-st_header_slider), video, object{
 /*一面に表示する*/
 #st-menuwide,#wrapper-in,#st-menuwide, #content-w,#content,#footer{
   max-width:none !important;
-  padding: 0 !important;
+  padding: 0 0!important;
 }
 
 .colum1 main{ /*一旦、全ての余白を取る*/
@@ -690,9 +693,10 @@ padding-right: 20px;
 .st-topcontent .row-box-article  .st-cardstyle .kanren dt img {
     width: 100%!important;
     object-fit: cover;
+    height: 195px;
 }
 .row-box-article .st-cardstyle .kanren dl {
-    width: 30% ;
+    width: 32% ;
 }
 
 .btn-img--toallpage {
@@ -777,6 +781,7 @@ border-bottom-style: none !important;
 
 .header .search__form{
     width: 25%;
+    height: 0;
 }
 .sns-icons {
   width: 300px;
@@ -822,20 +827,20 @@ border-bottom-style: none !important;
     width: 50%;
 }
 .header__pic--logo{
-  width: 430px;
+  width: 38%;
   padding-bottom: 60px;
   text-align: center;
   margin: 0 auto;
 }
 
 .header__pic--logo .lamp__icon{
-  width: 42px;
+  width: 11;
   margin: 0 auto;
   margin-bottom: 17px;
 }
 
 .background-draw img{
-  width: 300px;
+  width: 95%;
   display: block;
   margin: 0 auto;
   padding: 0;
@@ -845,10 +850,6 @@ border-bottom-style: none !important;
 }
 .background-draw__left {
   margin-bottom: -3px;
-}
-
-#searchform{
-  border-radius: 20px;
 }
 
 
@@ -989,11 +990,14 @@ ul.profile-sns{
   margin-bottom: 25px !important;
 }
 
-p.st-author-description:after {
-  content: "プロフィールはこちら";
+.st-author-description a{
   font-size: 13px;
+  color: #333;
   font-weight: bold;
-  border-bottom: 7px solid #fff08c;
+  display: inline-block;
+  float: right;
+  margin: 10px;
+  background: linear-gradient(transparent 60%, #FFFF00 60%);
 }
 
 /*サイド：ランキング記事一覧：AFFINGER管理「ヘッダー下おすすめ」 [st-osusume]*/
@@ -1014,10 +1018,6 @@ p.st-author-description:after {
   display: flex;
 }
 
-.home-post .side .kanren dt {
-  width: 100% !important;
-  padding-right: 18px;
-}
 
 .home-post .side .kanren .popular-t a{
   font-size: 14px !important;
@@ -1034,7 +1034,6 @@ p.st-author-description:after {
 }
 
 #footer-wrapper {
-  margin: 0 calc(50% - 50vw) !important;
   padding: 60px 0 !important;
 }
 
@@ -1731,6 +1730,11 @@ section {
 .search__form{
   display: none;
 }
+
+#contentInner{
+  width: 100% !important;
+}
+
 
  /*新着記事*/
  .st-topcontent::before {
