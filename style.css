@@ -80,14 +80,13 @@ Version: 20210719
 }
 #contentInner {
   float: none !important;
-  padding-top: 25px !important;
   width: 1306px !important;
   margin: 0 auto !important;
 }
 
 .wide-obi{
   background-color: #ffecda;
-  margin: 0 calc(50% - 50vw) !important;
+	margin: 0 calc(50% - 50vw);
   margin-bottom: 40px !important;
 }   
 
@@ -119,8 +118,9 @@ Version: 20210719
 }
 
 img:not(.size-st_header_slider), video, object{
-    max-width: 100%;
+    max-width: none;
 }
+
 
 /*
 
@@ -269,10 +269,21 @@ display: none;
 .original-btn .btn{
 box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
 }
-.original-btn .btn--orange, .original-btn .btn--orange a {
-  background-color: #f8bb86;
+
+.original-btn .btn a{
   color: #fff;
 }
+  
+.btn--pink {
+  background-color: #f9b19d;
+ 
+}
+
+.btn--orange{
+  background-color: #f8bb86;
+  
+}
+
 .original-btn .btn-copy{
   color: #333;
   font-size: 0.7rem;
@@ -722,15 +733,12 @@ padding-left: 0 !important;
 
 .kanren dl {
 border-bottom-style: none !important;
+margin-bottom: 0;
 }
 .kanren dt {
   width: 128px;
   padding-right: 10px;
   object-fit: cover;
-}
-
-.kanren dt img {
-  width: 100% !important;
 }
 
 
@@ -768,6 +776,7 @@ border-bottom-style: none !important;
 .single .featured-contens__box{
   display: none;
 }
+
 
 
 /*
@@ -859,6 +868,10 @@ border-bottom-style: none !important;
 
 *************************************************/
 
+.home-post.post {
+  padding-top: 35px;
+}
+
 /*トップページ：featured-contensバナー(大)*/
   .featured-contens__box--img {
     width: 20%; }
@@ -892,17 +905,23 @@ border-bottom-style: none !important;
 }
 .area-list .kanren dl {
   display: flex;
+  padding: 20px 10px 0 10px;
 }
 .area-list + .area-list{
      margin-left: 33px;
  }
  .area-list-body .kanren dt{
   display: flex;
-  width: 166% !important;
+  width: 140% !important;
+  padding: 0;
 }
 .area-list .kanren dt img{
-  width: 100%;
+  width: 107px;
+  height: 87px;
+  object-fit: cover;
+  padding-right: 10px;
 }
+
 .area-contens__img{
   width: 23%;
   padding-bottom: 10px;
@@ -925,12 +944,6 @@ border-bottom-style: none !important;
    background-color: #ffead5;
 }
 
-.area-list h5.kanren-t a{
-  font-size: 13px !important;
-  line-height: 1.7 !important;
-  padding-left: 10px !important;
-  display: block;
-}
 
 /*
 
@@ -1014,10 +1027,13 @@ ul.profile-sns{
   padding: 0;
 }
 
+.side .kanren dt img{
+  width: 120px;
+}
+
 .home-post .side .kanren dl{
   display: flex;
 }
-
 
 .home-post .side .kanren .popular-t a{
   font-size: 14px !important;
@@ -1055,6 +1071,7 @@ ul.profile-sns{
 *************************************************/
 
 /*　投稿ページの上(タイトル、パンくず、カテゴリーアイコン、SNSアイコン、更新日の位置)　*/
+
 
 .entry-title{
     padding: 0 !important;
@@ -1188,7 +1205,8 @@ h2:not([class^="is-style-st-heading-custom-"]):not([class*=" is-style-st-heading
 
 /*投稿ページ：Q&Aバナー*/
 .qar-contens__box {
-  background-color: #ffecda;
+  width: 796px;
+  margin: 0 auto;
   padding: 40px;
 }     
 .qar-contens__box__btn {
@@ -1212,10 +1230,10 @@ h2:not([class^="is-style-st-heading-custom-"]):not([class*=" is-style-st-heading
   width: 100%; 
 }
 .qar-contens__box-small .qar-contens__box__character{
-  width: 24%;
+  width: 200px;
 }
 .qar-contens__box-small .qar-contens__box__txt{
-  width: 63%;
+  width: 506px;
   padding-left: 40px;
 }
 .qar-contens__box__btn {
