@@ -6,29 +6,7 @@ Version: 20210719
 */
 
 
-/*media Queries 　スマートフォンとタブレットサイズ（959px以下）で適応したいCSS - スマホ・タブレット
----------------------------------------------------------------------------------------------------*/
-@media only screen and (max-width: 959px) {
 
-
-}
-
-
-/*media Queries タブレットサイズ（600px～959px）のみで適応したいCSS -タブレットのみ
----------------------------------------------------------------------------------------------------*/
-@media only screen and (min-width: 600px) and (max-width: 959px) {
-
-
-	/*-- ここまで --*/
-}
-
-/*media Queries タブレット（600px）以上で適応したいCSS -タブレット・PC
----------------------------------------------------------------------------------------------------*/
-@media only screen and (min-width: 600px) {
-
-
-	/*-- ここまで --*/
-}
 
 /*media Queries PCサイズ（960px）以上で適応したいCSS - PCのみ
 ---------------------------------------------------------------------------------------------------*/
@@ -582,7 +560,6 @@ p.st-author-description {
 
 ul.profile-sns{
   background-color: #fff298;
-  height: 65px;
   vertical-align: middle;
 }
 .st-author-profile .post .sns ul, .st-author-profile .sns ul {
@@ -1308,7 +1285,7 @@ p.register_status, ul.register_links{
 
 ***************/
 
-#s-navi dt.trigger {
+.hamburger-menu{
   display: none;
 }
 .top-wbox-u {
@@ -1333,11 +1310,9 @@ section {
   width: 100%;
   padding-bottom: 0;
   margin: 0 auto;
+  padding-bottom: 30px;
 }
 .background-draw{
-  display: none;
-}
-.sns-icons {
   display: none;
 }
 .search__form{
@@ -1348,6 +1323,13 @@ section {
   width: 100% !important;
 }
 
+.home-post.post {
+  padding: 0 0 !important;
+}
+
+.home-post .rbox.side.profile .widget:first-child,.st-author-profile{
+  display: none;
+}
 
  /*新着記事*/
  .st-topcontent::before {
@@ -1370,9 +1352,6 @@ section {
 .kanren dt img {
   height: 140px !important;
 }
-.st-author-box{
-display:none;
-}
 
 /*24H記事*/ 
 .side{
@@ -1392,7 +1371,7 @@ display:none;
   background-color: #fff5d0 !important;
   margin: 0;
 }
-.side::before {
+/*.side::before:not(.home) {
   content: '24時間以内に人気';
   background-color: #ffdfa8;
   text-align: center;
@@ -1401,6 +1380,7 @@ display:none;
   font-size: 19px;
   display: block;
 }
+*/
 .side .pop-box::before{
   content: none;
 }
@@ -1553,6 +1533,56 @@ margin: 0 auto;
 }
   
 }
+
+
+/*media Queries タブレットサイズ（600px～959px）のみで適応したいCSS -タブレットのみ
+---------------------------------------------------------------------------------------------------*/
+@media only screen and (min-width: 600px) and (max-width: 1100px) {
+
+  .sub-title{
+    font-size: 0.67rem;
+  }
+
+  .home-post .side .kanren dl {
+    display: block;
+  }
+  .pop-box{
+    padding: 0 !important;
+  }
+  .side .kanren dt img {
+    width: 100%;
+  }
+  .kanren dt {
+    padding-right: 0;
+  }
+  .side .pop-box::before {
+    width: 70%;
+    padding-bottom: 10%;
+  }
+  .st-cardstyle .kanren dt img {
+    height: 40vh !important;
+  }
+
+  .area-list .kanren dt img {
+    height: 40vh;
+  }
+  .area-list .kanren dl {
+    padding: 11px 0 0 0;
+  }
+  
+    /*-- ここまで --*/
+ }
+  
+
+
+
+
+
+
+
+
+
+
 
 /*
 
