@@ -1285,6 +1285,10 @@ p.register_status, ul.register_links{
 
 ***************/
 
+html.s-navi-search-overlay {
+  margin: 0;
+}
+
 .hamburger-menu{
   display: none;
 }
@@ -1303,6 +1307,10 @@ section {
 }
 
   /*ヘッダー*/
+
+.outer__header.header {
+  margin: 20px 20px;
+}
 .background-draw {
   width: 33%;
 }
@@ -1331,6 +1339,7 @@ section {
   display: none;
 }
 
+
  /*新着記事*/
  .st-topcontent::before {
   content: '新着記事';
@@ -1343,14 +1352,23 @@ section {
   margin-bottom: 30px;
   color: #fff;
 }
-.kanren{
+.row-box-article{
   padding:0 20px;
-  }
-  .kanren dl {
-  width: 48% !important;
+}
+
+.kanren dl {
+width: 48% !important;
 }
 .kanren dt img {
   height: 140px !important;
+}
+
+
+
+.btn--pink {
+  width: 66%;
+  font-size: 27px;
+  margin-bottom: 20px;
 }
 
 /*24H記事*/ 
@@ -1371,7 +1389,7 @@ section {
   background-color: #fff5d0 !important;
   margin: 0;
 }
-/*.side::before:not(.home) {
+.side::before:not(.home) {
   content: '24時間以内に人気';
   background-color: #ffdfa8;
   text-align: center;
@@ -1380,43 +1398,59 @@ section {
   font-size: 19px;
   display: block;
 }
-*/
-.side .pop-box::before{
-  content: none;
+
+.side .pop-box::before {
+  content: "人気の記事";
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  color: #e3d18c;
+  font-size: 23px !important;
+  font-weight: bold;
 }
 .featured-contens__box{
   margin: 0;
   background-color: #ffdab7;
 }
 
+.wide-obi{
+  margin-bottom: 0 !important;
+}
+
+
 /*イラスト４つ*/ 
 .featured-contens__box--img {
-  width: 46% ;
+  width: 42% ;
   padding: 10px 0 ;
 }
 
 /*ネタ募集中*/ 
-.qar-contens__box {
-  background-color: #ffecda;
-  padding: 40px 0 55px 0;
+
+.qar-contens__box{
+  margin-bottom: 40px;
+  padding: 50px 20px;
 }
 .qar-contens__box__txt--img-top,.qar-contens__box__txt--img-btm{
   display: none;
 }
-.qar-contens__box-small .qar-contens__box__txt {
-  width: 83% ;
-  order: 2;
-}
-.qar-contens__box__txt--mid{
-  font-size: 20px;
-}
-.qar-contens__box__btn {
-  padding-top: 0;
-}
 .qar-contens__box-small .qar-contens__box__character {
-  width: 30% ;
+  width: 59% ;
   padding-top: 28px ;
   margin: 0 auto ;
+}
+.qar-contens__box-small .qar-contens__box__txt{
+  width: 100% ;
+}
+.qar-contens__box__txt{
+  order: 2;
+  padding-right: 0;
+  margin: 0 auto;
+}
+.qar-contens__box__btn{
+  padding-top: 0;
+}
+.qar-contens__box__btn .btn{
+  font-size: 26px !important;
 }
 
 /*今まで住んだところ*/ 
@@ -1531,6 +1565,18 @@ margin: 0 auto;
 #menu-btn-check:checked ~ .menu-content {
   right: 0;/*メニューを画面内へ*/
 }
+
+.side .widget_media_image{
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+.side .kanren dt img {
+  width: 100%;
+  object-fit: cover;
+}
+
+
   
 }
 
