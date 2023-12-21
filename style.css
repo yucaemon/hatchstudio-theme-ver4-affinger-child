@@ -11,8 +11,6 @@ Version: 20210719
 /*media Queries PCサイズ（960px）以上で適応したいCSS - PCのみ
 ---------------------------------------------------------------------------------------------------*/
 @media print, screen and (min-width: 960px) {
-
-
 	/*-- ここまで --*/
 }
 
@@ -464,7 +462,7 @@ margin-bottom: 0;
   .qar-contens__box__txt {
     padding-right: 50px; }
     .qar-contens__box__txt--mid {
-      font-size: 30px;
+      font-size: 26px;
       color: #f9a694;
       font-weight: bold;
       padding-bottom: 5px; }
@@ -1275,316 +1273,10 @@ p.register_status, ul.register_links{
     width: 100% !important;
 }
 
-/*media Queries スマホサイズ（599px）以下で適応したいCSS - スマホのみ
----------------------------------------------------------------------------------------------------*/
-@media print, screen and (max-width: 599px) {
-
- /*
-
-トップページ
-
-***************/
-
-html.s-navi-search-overlay {
-  margin: 0;
-}
-
-.hamburger-menu{
-  display: none;
-}
-.top-wbox-u {
-  padding: 0; 
-} 
-.entry-content {
-  margin-bottom: 0;
-  padding: 0;
-}
-.st-topcontent{
-  margin: 0 !important;
-}
-section {
-  margin: 0 !important;
-}
-
-  /*ヘッダー*/
-
-.outer__header.header {
-  margin: 20px 20px;
-}
-.background-draw {
-  width: 33%;
-}
-.header__pic--logo {
-  width: 100%;
-  padding-bottom: 0;
-  margin: 0 auto;
-  padding-bottom: 30px;
-}
-.background-draw{
-  display: none;
-}
-.search__form{
-  display: none;
-}
-
-#contentInner{
-  width: 100% !important;
-}
-
-.home-post.post {
-  padding: 0 0 !important;
-}
-
-.home-post .rbox.side.profile .widget:first-child,.st-author-profile{
-  display: none;
-}
-
-
- /*新着記事*/
- .st-topcontent::before {
-  content: '新着記事';
-  background-color: #f9b19d;
-  text-align: center;
-  width: 100%;
-  padding: 10px 0;
-  font-size: 19px;
-  display: block;
-  margin-bottom: 30px;
-  color: #fff;
-}
-.row-box-article{
-  padding:0 20px;
-}
-
-.kanren dl {
-width: 48% !important;
-}
-.kanren dt img {
-  height: 140px !important;
-}
-
-
-
-.btn--pink {
-  width: 66%;
-  font-size: 27px;
-  margin-bottom: 20px;
-}
-
-/*24H記事*/ 
-.side{
-  padding: 0 0;
-  margin: 0 calc(50% - 50vw);
-  margin-bottom: 0;
-}
-.responbox70{
-  display: initial;
-  flex-direction: inherit;
-}
-.home-post .side .kanren dl {
-  display: block;
-  width: 48% !important;
-}
-.kanren.pop-box {
-  background-color: #fff5d0 !important;
-  margin: 0;
-}
-.side::before:not(.home) {
-  content: '24時間以内に人気';
-  background-color: #ffdfa8;
-  text-align: center;
-  width: 100%;
-  padding: 10px 0;
-  font-size: 19px;
-  display: block;
-}
-
-.side .pop-box::before {
-  content: "人気の記事";
-  display: inline-block;
-  width: 100%;
-  text-align: center;
-  color: #e3d18c;
-  font-size: 23px !important;
-  font-weight: bold;
-}
-.featured-contens__box{
-  margin: 0;
-  background-color: #ffdab7;
-}
-
-.wide-obi{
-  margin-bottom: 0 !important;
-}
-
-
-/*イラスト４つ*/ 
-.featured-contens__box--img {
-  width: 42% ;
-  padding: 10px 0 ;
-}
-
-/*ネタ募集中*/ 
-
-.qar-contens__box{
-  margin-bottom: 40px;
-  padding: 50px 20px;
-}
-.qar-contens__box__txt--img-top,.qar-contens__box__txt--img-btm{
-  display: none;
-}
-.qar-contens__box-small .qar-contens__box__character {
-  width: 59% ;
-  padding-top: 28px ;
-  margin: 0 auto ;
-}
-.qar-contens__box-small .qar-contens__box__txt{
-  width: 100% ;
-}
-.qar-contens__box__txt{
-  order: 2;
-  padding-right: 0;
-  margin: 0 auto;
-}
-.qar-contens__box__btn{
-  padding-top: 0;
-}
-.qar-contens__box__btn .btn{
-  font-size: 26px !important;
-}
-
-/*今まで住んだところ*/ 
-.area-list {
-width: 100% ;
-}
-.area-list-body {
-display: none;
-}
-.area-list-title {
-border-bottom: 1px #fff solid;
-}
-.area-list + .area-list {
-margin-left: 0; 
-}
-.area-contens__img {
-width: 62%;
-padding-bottom: 10px;
-margin: 0 auto;
-}
-
-/*ハンバーガーメニュー*/ 
-.menu-btn {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  display: flex;
-  height: 60px;
-  width: 60px;
-  justify-content: center;
-  align-items: center;
-  z-index: 90;
-  background-color: #f9b19d;
-}
-.menu-btn span,.menu-btn span:before,.menu-btn span:after {
-  content: '';
-  display: block;
-  height: 3px;
-  width: 25px;
-  border-radius: 3px;
-  background-color: #ffffff;
-  position: absolute;
-}
-.menu-btn span:before {
-  bottom: 8px;
-}
-.menu-btn span:after {
-  top: 8px;
-}
-#menu-btn-check:checked ~ .menu-btn span {
-  background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
-}
-#menu-btn-check:checked ~ .menu-btn span::before {
-  bottom: 0;
-  transform: rotate(45deg);
-}
-#menu-btn-check:checked ~ .menu-btn span::after {
-  top: 0;
-  transform: rotate(-45deg);
-}
-#menu-btn-check {
-  display: none;
-}
-.menu-content {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 80;
-  background-color: #f9b19d;
-}
-.menu-content ul {
-  padding: 70px 10px 0;
-}
-.menu-content ul li {
-  border-bottom: solid 1px #ffffff;
-  list-style: none;
-}
-.menu-content ul li a {
-  display: block;
-  width: 100%;
-  font-size: 15px;
-  box-sizing: border-box;
-  color:#ffffff;
-  text-decoration: none;
-  padding: 9px 15px 10px 0;
-  position: relative;
-}
-.menu-content ul li a::before {
-  content: "";
-  width: 7px;
-  height: 7px;
-  border-top: solid 2px #ffffff;
-  border-right: solid 2px #ffffff;
-  transform: rotate(45deg);
-  position: absolute;
-  right: 11px;
-  top: 16px;
-}
-.menu-content {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  right: 100%;/*leftの値を変更してメニューを画面外へ*/
-  z-index: 80;
-  background-color: #f9b19d;
-  transition: all 0.5s;/*アニメーション設定*/
-}
-
-#menu-btn-check:checked ~ .menu-content {
-  right: 0;/*メニューを画面内へ*/
-}
-
-.side .widget_media_image{
-  width: 90%;
-  margin: 0 auto;
-  padding-bottom: 30px;
-}
-.side .kanren dt img {
-  width: 100%;
-  object-fit: cover;
-}
-
-
-  
-}
-
 
 /*media Queries タブレットサイズ（600px～959px）のみで適応したいCSS -タブレットのみ
 ---------------------------------------------------------------------------------------------------*/
 @media only screen and (min-width: 600px) and (max-width: 1100px) {
-
   .sub-title{
     font-size: 0.67rem;
   }
@@ -1618,7 +1310,313 @@ margin: 0 auto;
   
     /*-- ここまで --*/
  }
-  
+
+ /*media Queries スマホサイズ（599px）以下で適応したいCSS - スマホのみ
+---------------------------------------------------------------------------------------------------*/
+@media print, screen and (max-width: 599px) {
+
+
+
+  /*
+ 
+ トップページ
+ 
+ ***************/
+ 
+ html.s-navi-search-overlay {
+   margin: 0;
+ }
+ 
+ .hamburger-menu{
+   display: none;
+ }
+ .top-wbox-u {
+   padding: 0; 
+ } 
+ .entry-content {
+   margin-bottom: 0;
+   padding: 0;
+ }
+ .st-topcontent{
+   margin: 0 !important;
+ }
+ section {
+   margin: 0 !important;
+ }
+ 
+   /*ヘッダー*/
+ 
+ .outer__header.header {
+   margin: 20px 20px;
+ }
+ .background-draw {
+   width: 33%;
+ }
+ .header__pic--logo {
+   width: 100%;
+   padding-bottom: 0;
+   margin: 0 auto;
+   padding-bottom: 30px;
+ }
+ .background-draw{
+   display: none;
+ }
+ .search__form{
+   display: none;
+ }
+ 
+ #contentInner{
+   width: 100% !important;
+ }
+ 
+ .home-post.post {
+   padding: 0 0 !important;
+ }
+ 
+ .home-post .rbox.side.profile .widget:first-child,.st-author-profile{
+   display: none;
+ }
+ 
+ 
+  /*新着記事*/
+  .st-topcontent::before {
+   content: '新着記事';
+   background-color: #f9b19d;
+   text-align: center;
+   width: 100%;
+   padding: 10px 0;
+   font-size: 19px;
+   display: block;
+   margin-bottom: 30px;
+   color: #fff;
+ }
+ .row-box-article{
+   padding:0 20px;
+ }
+ 
+ .kanren dl {
+ width: 48% !important;
+ }
+ .kanren dt img {
+   height: 140px !important;
+ }
+ 
+ 
+ 
+ .btn--pink {
+   width: 66%;
+   font-size: 27px;
+   margin-bottom: 20px;
+ }
+ 
+ /*24H記事*/ 
+ .side{
+   padding: 0 0;
+   margin: 0 calc(50% - 50vw);
+   margin-bottom: 0;
+ }
+ .responbox70{
+   display: initial;
+   flex-direction: inherit;
+ }
+ .home-post .side .kanren dl {
+   display: block;
+   width: 48% !important;
+ }
+ .kanren.pop-box {
+   background-color: #fff5d0 !important;
+   margin: 0;
+ }
+ .side::before:not(.home) {
+   content: '24時間以内に人気';
+   background-color: #ffdfa8;
+   text-align: center;
+   width: 100%;
+   padding: 10px 0;
+   font-size: 19px;
+   display: block;
+ }
+ 
+ .side .pop-box::before {
+   content: "人気の記事";
+   display: inline-block;
+   width: 100%;
+   text-align: center;
+   color: #e3d18c;
+   font-size: 23px !important;
+   font-weight: bold;
+ }
+ .featured-contens__box{
+   margin: 0;
+   background-color: #ffdab7;
+ }
+ 
+ .wide-obi{
+   margin-bottom: 0 !important;
+ }
+ 
+
+ /*イラスト４つ*/ 
+ .featured-contens__box--img {
+   width: 42% ;
+   padding: 10px 0 ;
+ }
+ 
+ /*ネタ募集中*/ 
+ 
+ .qar-contens__box{
+   margin-bottom: 40px;
+   padding: 50px 20px;
+ }
+ .qar-contens__box__txt--img-top,.qar-contens__box__txt--img-btm{
+   display: none;
+ }
+ .qar-contens__box-small .qar-contens__box__character {
+   width: 50% ;
+   padding-top: 28px ;
+   margin: 0 auto ;
+ }
+ .qar-contens__box-small .qar-contens__box__txt{
+   width: 100% ;
+ }
+ .qar-contens__box__txt{
+   order: 2;
+   padding-right: 0;
+   margin: 0 auto;
+ }
+ .qar-contens__box__btn{
+   padding-top: 0;
+ }
+ .qar-contens__box__btn .btn{
+   font-size: 26px !important;
+ }
+ 
+ /*今まで住んだところ*/ 
+ .area-list {
+ width: 100% ;
+ }
+ .area-list-body {
+ display: none;
+ }
+ .area-list-title {
+ border-bottom: 1px #fff solid;
+ }
+ .area-list + .area-list {
+ margin-left: 0; 
+ }
+ .area-contens__img {
+ width: 62%;
+ padding-bottom: 10px;
+ margin: 0 auto;
+ }
+ 
+ }
+ 
+   /*上のハンバーガーメニュー*/ 
+ .menu-btn {
+   position: fixed;
+   top: 10px;
+   left: 10px;
+   display: flex;
+   height: 60px;
+   width: 60px;
+   justify-content: center;
+   align-items: center;
+   z-index: 90;
+   background-color: #f9b19d;
+ }
+ .menu-btn span,.menu-btn span:before,.menu-btn span:after {
+   content: '';
+   display: block;
+   height: 3px;
+   width: 25px;
+   border-radius: 3px;
+   background-color: #ffffff;
+   position: absolute;
+ }
+ .menu-btn span:before {
+   bottom: 8px;
+ }
+ .menu-btn span:after {
+   top: 8px;
+ }
+ #menu-btn-check:checked ~ .menu-btn span {
+   background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+ }
+ #menu-btn-check:checked ~ .menu-btn span::before {
+   bottom: 0;
+   transform: rotate(45deg);
+ }
+ #menu-btn-check:checked ~ .menu-btn span::after {
+   top: 0;
+   transform: rotate(-45deg);
+ }
+ #menu-btn-check {
+   display: none;
+ }
+ .menu-content-top {
+   width: 100%;
+   height: 100%;
+   position: fixed;
+   top: 0;
+   right: 0;
+   z-index: 80;
+   background-color: #f9b19d;
+ }
+ .menu-content-top ul {
+   padding: 70px 10px 0;
+ }
+ .menu-content-top ul li {
+   border-bottom: solid 1px #ffffff;
+   list-style: none;
+ }
+ .menu-content-top ul li a {
+   display: block;
+   width: 100%;
+   font-size: 15px;
+   box-sizing: border-box;
+   color:#ffffff;
+   text-decoration: none;
+   padding: 9px 15px 10px 0;
+   position: relative;
+ }
+ .menu-content-top ul li a::before {
+   content: "";
+   width: 7px;
+   height: 7px;
+   border-top: solid 2px #ffffff;
+   border-right: solid 2px #ffffff;
+   transform: rotate(45deg);
+   position: absolute;
+   right: 11px;
+   top: 16px;
+ }
+ .menu-content-top {
+   width: 100%;
+   height: 100%;
+   position: fixed;
+   top: 0;
+   right: 100%;/*leftの値を変更してメニューを画面外へ*/
+   z-index: 80;
+   background-color: #f9b19d;
+   transition: all 0.5s;/*アニメーション設定*/
+ }
+ 
+ #menu-btn-check:checked ~ .menu-content-top {
+   right: 0;/*メニューを画面内へ*/
+ }
+ 
+ .side .widget_media_image{
+   width: 90%;
+   margin: 0 auto;
+   padding-bottom: 30px;
+ }
+ .side .kanren dt img {
+   width: 100%;
+   object-fit: cover;
+ } 
+ 
+
 
 
 
