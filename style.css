@@ -8,9 +8,13 @@ Version: 20210719
 
 
 
-/*media Queries PCサイズ（960px）以上で適応したいCSS - PCのみ
+/*media Queries PCサイズ（600px）以上で適応したいCSS - タブレットのみ
 ---------------------------------------------------------------------------------------------------*/
-@media print, screen and (min-width: 960px) {
+@media print, screen and (min-width: 600px) {
+.hamburger-menu{
+  display: none;
+}
+  
 	/*-- ここまで --*/
 }
 
@@ -356,7 +360,6 @@ margin-bottom: 0;
   border-radius: 10px;
 }
 
-
 .sns-icons {
   width: 300px;
 }
@@ -526,6 +529,16 @@ margin-bottom: 0;
 .st-author-profile-content, .st-author-profile-content {
   padding: 0 !important;
 }
+
+.side .widget_media_image{
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+.side .kanren dt img {
+  width: 100%;
+  object-fit: cover;
+} 
 
 /*サイド： プロフィール：*/
 .st-author-profile .st-author-nickname {
@@ -1274,6 +1287,7 @@ p.register_status, ul.register_links{
 }
 
 
+
 /*media Queries タブレットサイズ（600px～959px）のみで適応したいCSS -タブレットのみ
 ---------------------------------------------------------------------------------------------------*/
 @media only screen and (min-width: 600px) and (max-width: 1100px) {
@@ -1314,9 +1328,6 @@ p.register_status, ul.register_links{
  /*media Queries スマホサイズ（599px）以下で適応したいCSS - スマホのみ
 ---------------------------------------------------------------------------------------------------*/
 @media print, screen and (max-width: 599px) {
-
-
-
   /*
  
  トップページ
@@ -1327,9 +1338,6 @@ p.register_status, ul.register_links{
    margin: 0;
  }
  
- .hamburger-menu{
-   display: none;
- }
  .top-wbox-u {
    padding: 0; 
  } 
@@ -1346,6 +1354,13 @@ p.register_status, ul.register_links{
  
    /*ヘッダー*/
  
+.wp-mobile .sns-icons:not(.sns .sns-icons) {
+  display: none;
+}
+.wp-mobile .header .search__form{
+  display: none;
+}    
+ 
  .outer__header.header {
    margin: 20px 20px;
  }
@@ -1361,9 +1376,7 @@ p.register_status, ul.register_links{
  .background-draw{
    display: none;
  }
- .search__form{
-   display: none;
- }
+
  
  #contentInner{
    width: 100% !important;
@@ -1400,8 +1413,7 @@ p.register_status, ul.register_links{
  .kanren dt img {
    height: 140px !important;
  }
- 
- 
+
  
  .btn--pink {
    width: 66%;
@@ -1463,7 +1475,7 @@ p.register_status, ul.register_links{
  }
  
  /*ネタ募集中*/ 
- 
+
  .qar-contens__box{
    margin-bottom: 40px;
    padding: 50px 20px;
@@ -1509,112 +1521,162 @@ p.register_status, ul.register_links{
  padding-bottom: 10px;
  margin: 0 auto;
  }
- 
- }
- 
-   /*上のハンバーガーメニュー*/ 
+ /*上のハンバーガーメニュー*/ 
  .menu-btn {
-   position: fixed;
-   top: 10px;
-   left: 10px;
-   display: flex;
-   height: 60px;
-   width: 60px;
-   justify-content: center;
-   align-items: center;
-   z-index: 90;
-   background-color: #f9b19d;
- }
- .menu-btn span,.menu-btn span:before,.menu-btn span:after {
-   content: '';
-   display: block;
-   height: 3px;
-   width: 25px;
-   border-radius: 3px;
-   background-color: #ffffff;
-   position: absolute;
- }
- .menu-btn span:before {
-   bottom: 8px;
- }
- .menu-btn span:after {
-   top: 8px;
- }
- #menu-btn-check:checked ~ .menu-btn span {
-   background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
- }
- #menu-btn-check:checked ~ .menu-btn span::before {
-   bottom: 0;
-   transform: rotate(45deg);
- }
- #menu-btn-check:checked ~ .menu-btn span::after {
-   top: 0;
-   transform: rotate(-45deg);
- }
- #menu-btn-check {
-   display: none;
- }
- .menu-content-top {
-   width: 100%;
-   height: 100%;
-   position: fixed;
-   top: 0;
-   right: 0;
-   z-index: 80;
-   background-color: #f9b19d;
- }
- .menu-content-top ul {
-   padding: 70px 10px 0;
- }
- .menu-content-top ul li {
-   border-bottom: solid 1px #ffffff;
-   list-style: none;
- }
- .menu-content-top ul li a {
-   display: block;
-   width: 100%;
-   font-size: 15px;
-   box-sizing: border-box;
-   color:#ffffff;
-   text-decoration: none;
-   padding: 9px 15px 10px 0;
-   position: relative;
- }
- .menu-content-top ul li a::before {
-   content: "";
-   width: 7px;
-   height: 7px;
-   border-top: solid 2px #ffffff;
-   border-right: solid 2px #ffffff;
-   transform: rotate(45deg);
-   position: absolute;
-   right: 11px;
-   top: 16px;
- }
- .menu-content-top {
-   width: 100%;
-   height: 100%;
-   position: fixed;
-   top: 0;
-   right: 100%;/*leftの値を変更してメニューを画面外へ*/
-   z-index: 80;
-   background-color: #f9b19d;
-   transition: all 0.5s;/*アニメーション設定*/
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  height: 60px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  z-index: 90;
+  background-color: #f9b19d;
+}
+.menu-btn span,.menu-btn span:before,.menu-btn span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  position: absolute;
+}
+.menu-btn span:before {
+  bottom: 8px;
+}
+.menu-btn span:after {
+  top: 8px;
+}
+#menu-btn-check:checked ~ .menu-btn span {
+  background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+}
+#menu-btn-check:checked ~ .menu-btn span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+#menu-btn-check:checked ~ .menu-btn span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+#menu-btn-check:checked ~ .menu-content-top {
+ right: 0;/*メニューを画面内へ*/
+}
+#menu-btn-check {
+  display: none;
+}
+main ul, main ol{
+ padding: 0;
+ margin: 0;
+}
+.post #search {
+margin-bottom: 0;
+}
+.menu-content-top {
+width: 100%;
+height: 100%;
+position: fixed;
+top: 0;
+right: 100%;/*leftの値を変更してメニューを画面外へ*/
+z-index: 80;
+background-color: #ffffff;
+transition: all 0.5s;/*アニメーション設定*/
+}
+.search__form-box {
+ background-color: #FDD8C4;
+ margin-top: 85px;
+}
+.search__form {
+ width: 80%;
+ padding: 20px 10px;
+ margin: 0 auto;
+}
+
+.menu-content-top ul li {
+ list-style: none;
+ padding: 5px 45px
+}
+
+.menu-content-top ul li a {
+  display: block;
+  width: 100%;
+  font-size: 15px;
+  box-sizing: border-box;
+  text-decoration: none;
+  padding: 9px 15px 10px 0;
+  position: relative;
+  font-weight: bold;
+}
+
+ul.search-category li a{
+color:#f9b19d;
+}
+ul.search-category li{
+ border-bottom: solid 1px #f9b19d;
+}
+
+ul.search-category li a::before {
+ content: "";
+ width: 7px;
+ height: 7px;
+ border-top: solid 2px #f9b19d;
+ border-right: solid 2px #f9b19d;
+ transform: rotate(45deg);
+ position: absolute;
+ left: -22px;
+ top: 16px;
+}
+
+ul.menu-category li{
+ border-bottom: solid 1px #fff;
+ text-align: center;
+}
+ul.menu-category li a{
+ color: #fff;
+ font-size: 20px;
+}
+
+ul.post-info li.new{
+ background-color: #F9B19D;
+}
+ul.post-info li.twenty-four{
+ background-color: #FCD03F;
+}
+ul.post-info li.sns{
+ background-color: #FAE8AA;
+}
+ul.post-info li.sns .sns-icons {
+ width: 213px;
+ margin: 0 auto;
+}
+ul.post-info li.sns .sns-icons__icon{
+ width: 60px;
+ padding-right:0;
+}
+
+ul.location li {
+ background-color: #FFD788;
+}
+
+ul.company-info li {
+ background-color: #B7DCCF;
+}
+ 
+
+
+
  }
  
- #menu-btn-check:checked ~ .menu-content-top {
-   right: 0;/*メニューを画面内へ*/
- }
- 
- .side .widget_media_image{
-   width: 90%;
-   margin: 0 auto;
-   padding-bottom: 30px;
- }
- .side .kanren dt img {
-   width: 100%;
-   object-fit: cover;
- } 
+  
+
+
+
+
+
+
+
+
  
 
 
