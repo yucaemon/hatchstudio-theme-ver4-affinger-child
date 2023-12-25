@@ -155,6 +155,12 @@ padding: 0 !important;
 #st-menuwide {
 margin-bottom: 50px;
 }
+ul#menu-header {
+  max-width: 100%;
+}
+header .smanone ul.menu li {
+  width: 16%;
+}
 
 header #st-menuwide nav.menu li a {
 color: #fff !important;
@@ -163,6 +169,7 @@ color: #fff !important;
 .page .st-eyecatch-under{
 display: none;
 }
+
 
 
 /*
@@ -1287,14 +1294,24 @@ p.register_status, ul.register_links{
 }
 
 
+@media only screen and (min-width: 600px) and (max-width: 960px) {
+  #st-menubox {
+    height: 40px;
+    background-color: #f9b19d;
+    margin: 0 calc(50% - 50vw);
+  }
+  #st-menuwide {
+    margin-bottom: 0;
+  }
+}
 
 /*media Queries タブレットサイズ（600px～959px）のみで適応したいCSS -タブレットのみ
 ---------------------------------------------------------------------------------------------------*/
 @media only screen and (min-width: 600px) and (max-width: 1100px) {
+
   .sub-title{
     font-size: 0.67rem;
   }
-
   .home-post .side .kanren dl {
     display: block;
   }
@@ -1352,8 +1369,7 @@ p.register_status, ul.register_links{
    margin: 0 !important;
  }
  
-   /*ヘッダー*/
- 
+  /*ヘッダー*/
 .wp-mobile .sns-icons:not(.sns .sns-icons) {
   display: none;
 }
@@ -1563,6 +1579,12 @@ p.register_status, ul.register_links{
 #menu-btn-check:checked ~ .menu-content-top {
  right: 0;/*メニューを画面内へ*/
 }
+/*スクロールできるように*/
+.menu-content-top{
+  height: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+ }
 #menu-btn-check {
   display: none;
 }
