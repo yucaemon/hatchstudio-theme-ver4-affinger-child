@@ -1685,6 +1685,80 @@ ul.company-info li {
  background-color: #B7DCCF;
 }
  
+ /*ボトムメニュー*/ 
+.mini-text{font-size:10px;}/*文字大きさ*/
+
+ul.bottom-menu {
+    position: fixed;
+    left:0;
+    bottom:0;
+    width: 100%;
+    height:47px;/*高さ*/
+    margin:0;
+    padding:0;
+    background-color:#B7DCCF;/*背景色*/
+    z-index:30;
+    border-top: 1px solid #73B2B1;
+  }
+
+ul.bottom-menu li {
+    float:left;
+    width:25%;
+    background-color:#B7DCCF;/*背景色*/
+    list-style-type:none;
+    text-align:center;
+    font-size:25px;/*アイコンのサイズ*/}
+
+.bottom-menu li a {
+    display: block;
+    color:#fff;/*アイコン＆文字の色*/
+    padding-top:10px;
+    padding-bottom:5px;
+    line-height:10px;
+    text-decoration:none;
+    font-weight: bold;
+  }
+
+.bottom-menu li a:hover {
+    color:#73B2B1;/*マウスオーバー時の色*/}
+
+/* === 展開メニュー === */
+
+ul.menu-second-level {
+  visibility: hidden;
+  opacity: 0;
+  z-index:1;
+  }
+
+ul.menu-second-level li a{
+  border-top: 1px solid #73B2B1;
+  font-size: 15px;
+  line-height: 30px;
+  color: #73B2B1;
+}
+
+.menu-second-level li a:hover {
+    height:100%;
+    background: lightgrey;/*マウスオーバーの色*/}
+
+li.menu-width-max ul.menu-second-level {
+    position: absolute;
+    bottom: 47px;/*高さ*/
+    left: 0;
+    box-sizing: border-box;
+    width: 100%;
+    padding:0;}
+
+li.menu-width-max:hover ul.menu-second-level {
+    bottom: 47px;/*高さ*/
+    visibility: visible;
+    opacity: 1;}
+
+li.menu-width-max ul.menu-second-level li {
+    width: 100%;
+    background-color: #E0F1EC;
+}
+
 
 
 
