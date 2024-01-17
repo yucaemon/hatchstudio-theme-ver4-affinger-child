@@ -1393,6 +1393,11 @@ p.register_status, ul.register_links{
    display: none;
  }
 
+ #st-header::after {
+  height: 35px;
+  background-color: #f9b19d;
+}
+
  
  #contentInner{
    width: 100% !important;
