@@ -337,7 +337,7 @@ margin-bottom: 0;
 }
 
 /* ウェジットフッダー上にある『futuredコンテンツ帯のみ』を表示しない場所 */
-.single .featured-contens__box{
+.single .footer-topbox .featured-contens__box{
   display: none;
 }
 
@@ -601,6 +601,12 @@ ul.profile-sns{
   background: linear-gradient(transparent 60%, #FFFF00 60%);
 }
 
+/*サイド：スクロール固定：*/
+#scrollad{
+  margin-top: 27px;
+}
+
+
 /*サイド：ランキング記事一覧：AFFINGER管理「ヘッダー下おすすめ」 [st-osusume]*/
 
 .side .pop-box::before {
@@ -752,6 +758,42 @@ h2:not([class^="is-style-st-heading-custom-"]):not([class*=" is-style-st-heading
   list-style-type: none !important;
 }
 
+/*投稿ページ：下： この記事を書いた人：*/
+.mainbox .st-author-profile-avatar {
+  display: block;
+  width: 207px;
+  margin: 0 auto;
+}
+
+.mainbox .st-author-description{
+  display: none;
+}
+
+.mainbox .st-author-profile {
+  background: #fefbe1 !important;
+  padding-top: 20px;
+}
+
+.mainbox .st-author-profile-avatar img {
+  border-radius: 50% !important;
+}
+
+.mainbox p.st-author-nickname:before {
+  font-weight: normal;
+  padding: 5px 8px;
+  background-color: #fff;
+  margin: 10px;
+  font-size: 12px;
+  color: #8c8a81;
+  content: "記事を書いた人";
+}
+
+
+/*投稿ページ：下： SNSボタン消す：*/
+.mainbox + .sns{
+  display: none;
+}
+
 /*投稿ページ：下： 関連記事のレイアウト修正：*/
 .yarpp-thumbnail {
     width: 247px !important;
@@ -778,16 +820,9 @@ h2:not([class^="is-style-st-heading-custom-"]):not([class*=" is-style-st-heading
 }
 
 /*投稿ページ：下： featured-contens(小)のレイアウト修正：*/
-.single-page .featured-contens__box--img {
-  width: 44%;
-  padding: 13px 0;
+.featured-contens__box-small {
+  background-color: #ffecda;
 }
-
-
-.single-page .featured-contens__box {
-  padding: 30px 30px;
-}
-
 
 /*投稿ページ：下： (最新記事）＆（おすすめ記事)のタイトルのレイアウト修正：*/
 .st-widgets-box h3,.st-widgets-title{
