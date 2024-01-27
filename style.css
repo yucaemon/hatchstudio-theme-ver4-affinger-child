@@ -1392,6 +1392,17 @@ p.register_status, ul.register_links{
   }
 }
 
+/*media Queries タブレットサイズとスマホ（959px以下）適応したいCSS -タブレットとスマホ
+---------------------------------------------------------------------------------------------------*/
+@media only screen and (max-width: 1100px) {
+  #st-menubox {
+    height: 40px;
+    background-color: #f9b19d;
+    margin: 0 calc(50% - 50vw);
+  } 
+}
+
+
 /*media Queries タブレットサイズ（600px～959px）のみで適応したいCSS -タブレットのみ
 ---------------------------------------------------------------------------------------------------*/
 @media only screen and (min-width: 600px) and (max-width: 1100px) {
@@ -1424,11 +1435,6 @@ p.register_status, ul.register_links{
   }
   .area-list .kanren dl {
     padding: 11px 0 0 0;
-  }
-  #st-menubox {
-    height: 40px;
-    background-color: #f9b19d;
-    margin: 0 calc(50% - 50vw);
   }
   
     /*-- ここまで --*/
@@ -1833,6 +1839,12 @@ background: #f31333;
 padding-right: 20px;
 }
 
+.photo-info, .sourcelink {
+  font-size: 13px;
+  padding: 10px 0 25px 0;
+  color: #a1a1a1;
+}
+
 
 /*トップページ：記事一覧&カードの横並び設定 */
 .kanren {
@@ -1880,7 +1892,17 @@ padding-right: 20px;
    margin: 0 !important;
  }
  
+ .home #st-menubox {
+  display: none;
+}
+
+.search__form{
+  display: none;
+}
+
+
   /*ヘッダー*/
+
 .wp-mobile .sns-icons:not(.sns .sns-icons) {
   display: none;
 }
@@ -1925,7 +1947,17 @@ padding-right: 20px;
  .post::after {
   content:none;
 }
+
+.btn--pink {
+  width: 66%;
+  font-size: 27px;
+  margin-bottom: 20px;
+}
+
   /*新着記事*/
+  .entry-content > div {
+    margin-bottom: 0;
+  }
   .st-topcontent::before {
    content: '新着記事';
    background-color: #f9b19d;
@@ -1942,19 +1974,21 @@ padding-right: 20px;
  }
  
  .kanren dl {
- width: 48% !important;
- }
- .kanren dt img {
-   height: 140px !important;
+      max-width: 48% !important;
  }
 
- 
- .btn--pink {
-   width: 66%;
-   font-size: 27px;
-   margin-bottom: 20px;
- }
- 
+ .kanren dt {
+  float: none;
+  width: 100%;
+  padding-bottom: 10px;
+}
+.kanren dt img {
+  width: 100%;
+  height: 22vh;
+  object-fit: cover;
+}
+
+
  /*24H記事*/ 
  .side{
    padding: 0 0;
@@ -2022,6 +2056,11 @@ padding-right: 20px;
  /*タグ関連記事*/ 
  .yarpp-thumbnail{
   max-width: 46% !important;
+  height: 100% !important;
+ }
+
+ .yarpp-thumbnail > img{
+  height: 150px !important;
  }
  
  /*ネタ募集中*/ 
@@ -2090,7 +2129,7 @@ padding-right: 20px;
 
 /*　投稿ページ（スマホ）*/
 .single .st-eyecatch-under img, .single img.alignnone{
-  height: 200px;
+  height: 300px;
  }
  .single #side aside{
   display: none;
@@ -2104,6 +2143,7 @@ padding-right: 20px;
   width: 100%;
   padding: 20px 15px;
  }
+
 
 /*ショートカット (モバイル)*/
 .detail-box02__img{
