@@ -310,13 +310,17 @@ border-bottom-style: none !important;
 margin-bottom: 0;
 }
 .kanren dt img {
-    width: 100%;
+  width: 100%;
+  aspect-ratio: 5 / 3;
 }
 
+
 .kanren dt {
+	float: none;
+	width: 100%;
   padding-right: 10px;
-  object-fit: cover;
 }
+
 
 /*文字をセンターにする(投稿ページ以外)*/
 .not-front-page:not(.single) h1.entry-title{
@@ -487,23 +491,26 @@ margin-bottom: 0;
       width: 100%; }
 
 /*トップページ：エリア記事今まで住んだところ：*/
+
 .area-list {
   width: 21%;
-}
-.area-list .kanren dl {
-  padding: 20px 20px;
-}
-
-.area-list .kanren dt img {
-  width: 100%;
-  height: 93px;
-  object-fit: cover;
-  padding-bottom: 10px;
 }
 
 .area-contens__img{
   width: 23%;
   padding: 0 0 10px 0;
+}
+
+.area-list .kanren dl {
+  padding: 20px 20px;
+}
+
+
+.area-list .kanren dt img {
+  width: 100%;
+  object-fit: cover;
+  padding-bottom: 10px;
+  aspect-ratio: 4 / 3;
 }
 
 .area-list-title {
@@ -600,7 +607,6 @@ ul.profile-sns{
   color: #333;
   font-weight: bold;
   display: inline-block;
-  float: right;
   margin: 10px;
   background: linear-gradient(transparent 60%, #FFFF00 60%);
 }
@@ -715,7 +721,7 @@ margin-right: 0;
 
 .single .st-eyecatch-under img, .single img.alignnone{
   max-width: 100%;
-  height: 500px;
+  aspect-ratio: 5 / 3;
   object-fit: cover;
 }
 
@@ -805,14 +811,12 @@ h2:not([class^="is-style-st-heading-custom-"]):not([class*=" is-style-st-heading
 /*投稿ページ：下： 関連記事のレイアウト修正：*/
 .yarpp-thumbnail {
     width: 260px !important;
-    height: 260px!important;
     margin: 5px !important;
     border: none !important;
     overflow:hidden;
 }
 .yarpp-thumbnail > img{
     width: 100% !important;
-    height: 200px !important;
     margin: 0 !important;
 }
 .yarpp-thumbnail-title {
@@ -875,7 +879,6 @@ h2:not([class^="is-style-st-heading-custom-"]):not([class*=" is-style-st-heading
 }
 .articles__container__bottom .bt-right .kanren dt img {
   width: 100% !important;
-  height: 175px;
   object-fit: cover;
 }
 .articles__container__bottom .bt-right .kanren.pop-box dd h5{
@@ -1400,6 +1403,9 @@ p.register_status, ul.register_links{
     background-color: #f9b19d;
     margin: 0 calc(50% - 50vw);
   } 
+  .single #content {
+    width: auto !important;
+  }
 }
 
 
@@ -1427,24 +1433,24 @@ p.register_status, ul.register_links{
     padding-bottom: 10%;
   }
   .st-cardstyle .kanren dt img {
-    height: 40vh !important;
+    aspect-ratio: 4 / 3;
   }
 
   .area-list .kanren dt img {
-    height: 40vh;
+    aspect-ratio: 4 / 3;
   }
   .area-list .kanren dl {
     padding: 11px 0 0 0;
   }
-  
+    /*プロフィール*/
+  .st-author-profile .sns li {
+    padding: 0 !important;
+  }
+  .yarpp-thumbnail {
+    width: 31% !important;
+  }
     /*-- ここまで --*/
  }
-
-
-
-
-
-
 
 
 /*
@@ -1856,7 +1862,7 @@ padding-right: 20px;
 .st-topcontent .row-box-article  .st-cardstyle .kanren dt img {
     width: 100%!important;
     object-fit: cover;
-    height: 195px;
+    aspect-ratio: 4 / 3;
 }
 .row-box-article .st-cardstyle .kanren dl {
     width: 32% ;
@@ -1899,7 +1905,6 @@ padding-right: 20px;
 .search__form{
   display: none;
 }
-
 
   /*ヘッダー*/
 
@@ -1977,16 +1982,6 @@ padding-right: 20px;
       max-width: 48% !important;
  }
 
- .kanren dt {
-  float: none;
-  width: 100%;
-  padding-bottom: 10px;
-}
-.kanren dt img {
-  width: 100%;
-  height: 22vh;
-  object-fit: cover;
-}
 
 
  /*24H記事*/ 
@@ -2055,14 +2050,9 @@ padding-right: 20px;
  }
  /*タグ関連記事*/ 
  .yarpp-thumbnail{
-  max-width: 46% !important;
-  height: 100% !important;
+  max-width: 100% !important;
  }
 
- .yarpp-thumbnail > img{
-  height: 150px !important;
- }
- 
  /*ネタ募集中*/ 
 
  .qar-contens__box{
@@ -2134,7 +2124,19 @@ padding-right: 20px;
  .single #side aside{
   display: none;
  }
+
+ /*　会員登録（スマホ）*/
+ #wpmem_login legend, #wpmem_reg legend {
+  font-size: 19px !important;
+  padding: 10px;
+  width: 94% !important;
+}
  
+ /*　プロフィール（スマホ）*/
+ .st-author-profile {
+  margin: 20px 0;
+}
+
 /*　投稿ページの下の右側（おすすめ記事）を消す（スマホ）*/
  .single .bt-right{
   display: none;
