@@ -69,10 +69,6 @@ Version: 20210719
   margin-bottom: 40px !important;
 }   
 
-.entry-content > div {
-  margin-bottom: 75px;
-}
-
 .zigzag-pink {
   position: relative;
   background: #ffecda;
@@ -484,7 +480,7 @@ margin-bottom: 0;
 
 /*トップページ：featured-contensバナー(大)*/
 
-.home-post .featured-contens__box{
+.featured-contens__box{
   max-width: 1240px;
   margin: 0 auto;
   padding: 40px 0;
@@ -836,7 +832,7 @@ h2:not([class^="is-style-st-heading-custom-"]):not([class*=" is-style-st-heading
 /*投稿ページ：下： 関連記事のレイアウト修正：*/
 
 .yarpp-thumbnails-horizontal .yarpp-thumbnail {
-    width: 30% !important;
+    width: 23% !important;
     height: auto;
     margin: 5px !important;
     border: none !important;
@@ -1145,6 +1141,16 @@ object-fit: cover;
 
 *************************************************/
 
+.page main{
+  margin-right: 0 !important;
+  padding: 0;
+}
+.page #breadcrumb{
+  background-color: #ececec;
+  width: 100%;
+  padding: 8px 30px;
+}
+
 /*固定ページのタイトル*/
 .page h1.entry-title {
   background: #ffedb5 !important;
@@ -1168,7 +1174,6 @@ object-fit: cover;
   display: inline-block;
   margin: 0 auto;
   position: absolute;
-  right: 335px;
 }
 
 
@@ -1213,10 +1218,9 @@ object-fit: cover;
 }
 
 .lcp_catlist li{
-  width: 21% !important;
-display: flex;
-flex-direction: column-reverse;
-padding: 30px 0;
+  width: 17% !important;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .lcp_catlist--title{
@@ -1263,6 +1267,9 @@ padding: 30px 0;
   font-weight: bold;
   margin: 0 calc(50% - 50vw) !important;
 }
+.post .entry-title{
+  border: none !important;
+}
 
 /*マイナスマークの部分*/
 .post-61550 .entry-title::after,.post-61550 .entry-title::before{
@@ -1272,52 +1279,41 @@ padding: 30px 0;
 }
 
 /*会員登録*/
-#wpmem_reg {
-  margin-top: 20px;
-}
-#wpmem_login legend, #wpmem_reg legend {
-    background-color: #ede2ad6e;
-    padding: 38px;
-    width: 94% !important;
-}
-#wpmem_reg .button_div {
-    text-align: center !important;
+
+
+.um-locked-content {
+  border: none !important;
+  background: #ffda6c !important;
 }
 
-#wpmem_restricted_msg p {
-    display: none;
-}
-
-.wpmem-need-login{
-  background-color: #ffed9a;
-  padding: 31px;
-  margin-top: 35px;
-  font-size: 19px;
+.widget_nav_menu .menu-item{
+  background-color: #fff8dc !important;
+  padding: 10px !important;
   text-align: center;
+  margin-bottom: 10px !important;
 }
 
-#wpmem_login, #wpmem_reg {
-      width: 100% !important;
-      background-color: #fff7d9;
+　#nav_menu-2 li.menu-item a{
+  color: #f4c468 !important;
 }
 
-.wpmem-need-login {
-    margin-bottom: 0 !important;
-}
-
-#wpmem_login fieldset, #wpmem_reg fieldset{
-  margin:0 !important;
-  padding: 0 60px !important;
-}
-
-#wpmem_login, #wpmem_msg, #wpmem_reg, .wpmem_msg {
-    width: 100% !important;
-    padding: 45px 0 !important;
-}
-/*すでにログインしている場合のログアウト＆名前の表示を消す*/
-p.register_status, ul.register_links{
+/*記事下のアカウントフォーム消す*/
+.entry-content .um-login{
   display: none;
 }
+
+
+/*メンバー限定　アカウントページ*/
+.um-form {
+  max-width: 70%;
+  margin: 50px auto;
+}
+.um-col-alt-b {
+  margin: 0 auto !important;
+  width: 158px !important;
+}
+
+
 
 /*
 
@@ -1738,11 +1734,7 @@ p.register_status, ul.register_links{
 
 
  /*　会員登録（スマホ）*/
- #wpmem_login legend, #wpmem_reg legend {
-  font-size: 19px !important;
-  padding: 10px;
-  width: 94% !important;
-}
+
  
  /*　プロフィール（スマホ）*/
  .st-author-profile {
@@ -2394,3 +2386,4 @@ padding-right: 20px;
   padding: 10px 0 25px 0;
   color: #a1a1a1;
 }
+
