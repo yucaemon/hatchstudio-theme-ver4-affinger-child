@@ -860,6 +860,7 @@ h2:not([class^="is-style-st-heading-custom-"]):not([class*=" is-style-st-heading
 }
 
 /*投稿ページ：下： (最新記事）＆（おすすめ記事)のタイトルのレイアウト修正：*/
+
 .st-widgets-box h3,.st-widgets-title{
   background: #ffede9 !important;
   color: #737373 !important;
@@ -1141,14 +1142,16 @@ object-fit: cover;
 
 *************************************************/
 
-.page main{
+.not-front-page:not(.single) main{
   margin-right: 0 !important;
   padding: 0;
 }
-.page #breadcrumb{
+.not-front-page:not(.single) #breadcrumb{
   background-color: #ececec;
   width: 100%;
-  padding: 8px 30px;
+}
+.not-front-page:not(.single) #breadcrumb ol{
+  padding: 10px 30px;
 }
 
 /*固定ページのタイトル*/
