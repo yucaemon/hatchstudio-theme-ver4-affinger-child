@@ -493,23 +493,6 @@ margin-bottom: 0;
     min-width: 45%;
     padding-bottom: 10px; }
 
-/*トップページ：BOOのお悩み相談バナー(大)*/
-.qar-contens__box__character {
-    width: 15%; }
-  .qar-contens__box__btn {
-    padding-top: 70px; }
-  .qar-contens__box__txt {
-    padding-right: 50px; }
-    .qar-contens__box__txt--mid {
-      font-size: 26px;
-      color: #f9a694;
-      font-weight: bold;
-      padding-bottom: 5px; }
-    .qar-contens__box__txt--img-top {
-      width: 38%;
-      margin: 0 auto; }
-    .qar-contens__box__txt--img-btm {
-      width: 100%; }
 
 /*トップページ：エリア記事今まで住んだところ：*/
 
@@ -692,10 +675,6 @@ ul.profile-sns{
   width: 18%;
   padding-bottom: 30px;
 }
-
-
-
-
 
 /*
 
@@ -911,45 +890,6 @@ h2:not([class^="is-style-st-heading-custom-"]):not([class*=" is-style-st-heading
   
 }
 
-/*投稿ページ：Q&Aバナー*/
-.qar-contens__box {
-  max-width: 796px;
-  background: #ffecda;
-  margin: 0 auto;
-  padding: 40px;
-}     
-.qar-contens__box__btn {
-  padding-top: 68px; 
-}
-.qar-contens__box__txt {
-  padding-right: 50px;
-  width: 43%; 
-}
-.qar-contens__box__txt--mid {
-  font-size: 30px;
-  color: #f9a694;
-  font-weight: bold;
-  padding-bottom: 5px; 
-}
-.qar-contens__box__txt--img-top {
-  width: 38%;
-  margin: 0 auto; 
-}
-.qar-contens__box__txt--img-btm {
-  width: 100%; 
-}
-.qar-contens__box-small .qar-contens__box__character{
-  width: 25%;
-}
-.qar-contens__box-small .qar-contens__box__txt{
-  width: 58%;
-}
-.qar-contens__box__btn {
-  padding-top: 35px;
-}
-
-
-
 
 /*
 
@@ -982,7 +922,7 @@ h2:not([class^="is-style-st-heading-custom-"]):not([class*=" is-style-st-heading
   margin: 0 calc(50% - 50vw);
 }
 
-.archive .header__pic{
+.archive .header__pic, .page .header__pic{
   display: none;
 }
 
@@ -990,7 +930,7 @@ h2:not([class^="is-style-st-heading-custom-"]):not([class*=" is-style-st-heading
   display: none;
 }
 
-.archive .outer__header.header {
+.archive .outer__header.header, .page .outer__header.header {
   margin: 27px 0;
 }
 
@@ -1035,7 +975,7 @@ h2:not([class^="is-style-st-heading-custom-"]):not([class*=" is-style-st-heading
 .archive .kanren:not(.section .kanren),.page .archive.kanren{
   display: flex;
   justify-content:space-around;
-  padding: 25px 75px;
+  padding: 50px 75px;
   margin: 0 auto;
   flex-wrap: wrap;
 }
@@ -1049,7 +989,7 @@ order:1;
 .archive .kanren:not(.section .kanren)::after{
 content:"";
 display: block;
-width:21%;
+width:46%;
 }
 
 .archive .kanren:not(.section .kanren) dl,.page .archive.kanren li{
@@ -1084,44 +1024,6 @@ object-fit: cover;
   margin: 0 auto;
 }
 
-/* ヘッダー（木の）レイアウト */
-.category .title-bar-img {
-  width: 112px;
-  padding: 0 176px;
-}
-
-.category .title-bar{
-  position: absolute;
-  top: 64px;
-  left: 117px;
-}
-
-/* 一位の記事のレイアウト */
-.category .entry-content {
-    margin-bottom: 70px;
-    padding:10px 0;
-}
-.category #nocopy {
-    text-align: center;
-    margin-top: 30px;
-}
-
-.area-top-post__box-txt-pic {
-  margin: 0 auto;
-  width: 40px;
-  padding-bottom: 5px; }
-
-.area-top-post__box-txt-p {
-  margin: 0 auto;
-  width: 500px !important;
-  padding: 15px 44px !important;
-  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo UI", "メイリオ", Meiryo, sans-serif;
-  color: #222;
-  word-wrap: break-word;
-  font-weight: 600;
-  letter-spacing: .05em;
-  line-height: 1.6;
- }
 
  /*
 
@@ -1131,8 +1033,7 @@ object-fit: cover;
 
 /*一覧タイトルの余白*/
 .tag .post {
-  padding-top: 10px;
-  padding-bottom: 50px;
+  padding: 30px 0;
 }
 
 
@@ -1178,37 +1079,6 @@ object-fit: cover;
   margin: 0 auto;
   position: absolute;
 }
-
-
-/*一番上のランキング３つの記事レイアウト*/
-.tag-related-article{
-  font-size: 25px;
-  font-weight: bold;
-  padding-bottom: 32px;
-
-}
-.ranking__boxs{
-  width: 68%;
-  justify-content: center;
-  margin: 0 auto;
-}
-.ranking__boxs__box {
-  width: 217px;
-  padding: 0 13px;
-}
-.ranking__boxs__box-txt-pic {
-    display: block;
-    margin: 0 auto;
-    width: 17%;
-    padding-bottom: 10px;
-}
-
-.ranking__boxs__box-txt-p {
-  font-size: 14px;
-  font-weight: bold;
-  letter-spacing: 1.2px;
-  }
-
 
 /*共通レイアウト（プラグインList Category Postsのレイアウト）*/
 .lcp_catlist{
@@ -1296,8 +1166,12 @@ object-fit: cover;
   margin-bottom: 10px !important;
 }
 
-　#nav_menu-2 li.menu-item a{
+.widget_nav_menu .menu-item a {
   color: #f4c468 !important;
+}
+
+.widget_nav_menu ul{
+  padding-left: 0 !important;
 }
 
 /*記事下のアカウントフォーム消す*/
@@ -1332,8 +1206,9 @@ object-fit: cover;
 /*グーグルお問い合わせフォーム*/
 .contact-form {
   margin: 0 auto;
-  width: 800px;
+  width: 600px;
   overflow: visible !important;
+  padding: 50px 0;
 }
 
 /*
@@ -1661,51 +1536,7 @@ object-fit: cover;
   width: 47%;
  }
 
- /*ネタ募集中*/ 
 
- .qar-contens__box{
-   padding: 10px;
- }
-
- .qar-contens__box__txt--mid{
-  font-size: 20px;
- }
-
- .qar-contens__box__txt--mid {
-  font-size: 20px;
-  background-color: #fff;
-  padding: 2px 13px;
-  margin: 10px 0 20px 0;
-}
-
-.qar-contens__box__character{
-  width: 45%;
-  padding-top: 0;
-  margin: 0 auto;
-}
-
- .qar-contens__box__txt--img-top,.qar-contens__box__txt--img-btm{
-   display: none;
- }
- .qar-contens__box-small .qar-contens__box__character {
-   width: 50% ;
-   padding-top: 28px ;
-   margin: 0 auto ;
- }
- .qar-contens__box-small .qar-contens__box__txt{
-   width: 100% ;
- }
- .qar-contens__box__txt{
-   order: 2;
-   padding-right: 0;
-   margin: 0 auto;
- }
- .qar-contens__box__btn{
-   padding-top: 0;
- }
- .qar-contens__box__btn .btn{
-   font-size: 26px !important;
- }
  /*今まで住んだところ*/ 
  .area-list {
   width: 100% ;
