@@ -6,8 +6,6 @@ Version: 20210719
 */
 
 
-
-
 /*media Queries PCサイズ（600px）以上で適応したいCSS - 
 ---------------------------------------------------------------------------------------------------*/
 @media print, screen and (min-width: 600px) {
@@ -1067,18 +1065,32 @@ object-fit: cover;
 }
 
 /*タイトル横の画像（固定ページ毎に変わる画像）*/
-.post-61552 .entry-title::after {
-  content: url(./images/featured-page/featured-page__bad-food.svg);
+
+/*アマゾン*/
+.post-61874 .entry-title::after {
+  content: url(./images/featured-page/featured-page__bad-amazon.svg);
   width: 14%;
 }
 
-.post-33761 .entry-title::after {
-  content: url(./images/featured-page/featured-page__bad-food.svg);
-  width: 176px;
-  display: inline-block;
-  margin: 0 auto;
-  position: absolute;
+/*エンジニア*/
+.post-61883 .entry-title::after {
+  content: url(./images/featured-page/featured-page__engineer.svg);
+  width: 14%;
 }
+
+/*やばい事件*/
+.post-61879 .entry-title::after {
+  content: url(./images/featured-page/featured-page__bad-story.svg);
+  width: 14%;
+}
+
+/*アメリカーんなものを食う*/
+.post-61874 .entry-title::after {
+  content: url(./images/featured-page/featured-page__bad-foodsvg);
+  width: 14%;
+}
+
+
 
 /*共通レイアウト（プラグインList Category Postsのレイアウト）*/
 .lcp_catlist{
@@ -1129,27 +1141,46 @@ object-fit: cover;
 
 *************************************************/ 
 
-/*黄色の帯の部分*/
-.yellow-obi {
-  background-color: #ffcf6e;
+/*仕切り棒の部分*/
+.partition{
   text-align: center;
   color: #fff;
   padding: 12px 0;
-  font-size: .8em;
+  font-size: .9em;
   letter-spacing: 1.2px;
   font-weight: bold;
   margin: 0 calc(50% - 50vw) !important;
 }
+
+/*黄色の帯の部分*/
+.yellow-obi {
+  background-color: #ffcf6e;
+}
+
+/*緑の帯の部分*/
+.green-obi {
+  background-color: #A2D5CF;
+}
+
 .post .entry-title{
   border: none !important;
 }
 
 /*マイナスマークの部分*/
-.post-61550 .entry-title::after,.post-61550 .entry-title::before{
-  content: url(./images/private-page/private-page__mark.jpg);
-  width: 59px;
-  padding:0 10px;
+
+.post-61550 .entry-title::before{
+  content: url(./images/private-page/private-page__mark.svg);
+  width: 2%;
+  padding: 0 20px;
 }
+
+.post-61550 .entry-title::after{
+  content: url(./images/private-page/private-page__pin-person.svg);
+  width: 14%;
+  padding: 0 20px;
+}
+
+
 
 /*会員登録*/
 
@@ -1190,6 +1221,35 @@ object-fit: cover;
   width: 158px !important;
 }
 
+/*
+
+　固定ページ：ポートランドの日常
+
+*************************************************/
+.post-61851　h1.entry-title{
+  display: none !important;
+}
+
+.daily-life-page__container{
+  background-color: #FBFADD
+}
+
+.sns-embed__item{
+  width: 15%;
+}
+
+.sns-embed__item img{
+  width: 32%;
+}
+
+/*
+
+　固定ページ：プロフィール
+
+*************************************************/
+
+
+
 
 
 /*
@@ -1202,6 +1262,11 @@ object-fit: cover;
 .post-61548 h1.entry-title {
   display: none !important;
 }
+.contact-post-img {
+  width: 40%;
+  margin: 0 auto;
+}
+
 
 /*グーグルお問い合わせフォーム*/
 .contact-form {
