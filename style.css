@@ -920,21 +920,23 @@ h2:not([class^="is-style-st-heading-custom-"]):not([class*=" is-style-st-heading
   margin: 0 calc(50% - 50vw);
 }
 
-.archive .header__pic, .page .header__pic{
+/*トップ以外のヘッダーのレイアウト*/
+.not-front-page .background-draw{
   display: none;
 }
 
-.archive .sub-title {
-  display: none;
-}
-
-.archive .outer__header.header, .page .outer__header.header {
+.not-front-page .outer__header.header {
   margin: 27px 0;
 }
 
+.not-front-page .header__pic--logo {
+  width: 30%;
+  padding-bottom: 0;
+}
 
-.archive .header__pic--logo {
-  width: 319px;
+.not-front-page  .header__pic--logo .logo__img::before{
+  width: 12%;
+  width: 45px;
 }
 
 /*記事一覧の横レイアウト*/
@@ -1206,7 +1208,7 @@ object-fit: cover;
 }
 
 /*記事下のアカウントフォーム消す*/
-.entry-content .um-login{
+.entry-content .uimob340{
   display: none;
 }
 
@@ -1234,13 +1236,53 @@ object-fit: cover;
   background-color: #FBFADD
 }
 
-.sns-embed__item{
-  width: 15%;
+.daily-life-page-img {
+  width: 44%;
+  margin: 0 auto;
+  padding: 50px 0;
 }
 
-.sns-embed__item img{
-  width: 32%;
+.sns-embed__item{
+  width: 25%;
+  padding: 25px 24px;
+  margin: 53px 0;
 }
+
+.sns-embed__item-title {
+  margin: 0 auto;
+  line-height: 3;
+  padding-bottom: 17px;
+  text-align: center;
+}
+
+.sns-embed__item-title img{
+  width: 16%;
+}
+
+.sns-embed__item-instagram{
+  background-color: #fae8d8;
+}
+
+.sns-embed__item-title-instagram{
+  color: #f8a649;
+}
+
+.sns-embed__item-twitter {
+  background-color: #cfebe8;
+}
+
+.sns-embed__item-title-twitter{
+  color: #A2D5CF;
+}
+
+.sns-embed__item-facebook {
+  background-color: #faeee9;
+}
+
+.sns-embed__item-title-facebook{
+  color: #f9b19d;
+}
+
 
 /*
 
@@ -1248,7 +1290,46 @@ object-fit: cover;
 
 *************************************************/
 
+.profile-container {
+  padding: 50px 100px;
+  margin: 0 auto;
+}
 
+.profile-wrap {
+  width: 55%;
+}
+
+.profile-title {
+  font-size: 22px;
+  padding-bottom: 29px;
+  font-weight: bold;
+}
+
+.profile-head {
+  font-size: 60px;
+  color: #fff;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+ul.profile-box {
+  padding: 0;
+  margin: 47px 0;
+}
+
+.profile-text {
+  font-weight: bold;
+  color: #969696;
+}
+
+.profile-container-img-cat {
+  width: 16%;
+  padding-top: 439px;
+}
+.profile-container-img-sofa {
+  width: 20%;
+  padding-top: 130px;
+}
 
 
 
@@ -1259,7 +1340,7 @@ object-fit: cover;
 *************************************************/
 
 /*デフォルトの質問のヘッダーを消す*/
-.post-61548 h1.entry-title {
+.post-61548 h1.entry-title{
   display: none !important;
 }
 .contact-post-img {
@@ -1482,6 +1563,7 @@ object-fit: cover;
  .background-draw{
    display: none;
  }
+
 
  #st-header::after {
   height: 35px;
