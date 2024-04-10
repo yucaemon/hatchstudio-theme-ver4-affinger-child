@@ -94,6 +94,15 @@ img:not(.size-st_header_slider), video, object{
     max-width: none;
 }
 
+.entry-content > div {
+  margin-bottom: 0;
+}
+
+.inner__content{
+  margin: 0 auto;
+  max-width: 1240px;
+}
+
 
 /*
 
@@ -479,8 +488,6 @@ margin-bottom: 0;
 /*トップページ：featured-contensバナー(大)*/
 
 .featured-contens__box{
-  max-width: 1240px;
-  margin: 0 auto;
   padding: 40px 0;
 }
 .featured-contens__box--img {
@@ -500,7 +507,8 @@ margin-bottom: 0;
 
 .area-contens__img{
   width: 23%;
-  padding: 0 0 10px 0;
+  padding: 35px 160px 10px 0;
+  margin-left: auto;
 }
 
 .area-list .kanren dl {
@@ -975,7 +983,7 @@ h2:not([class^="is-style-st-heading-custom-"]):not([class*=" is-style-st-heading
 .archive .kanren:not(.section .kanren),.page .archive.kanren{
   display: flex;
   justify-content:space-around;
-  padding: 50px 75px;
+  padding: 30px 75px;
   margin: 0 auto;
   flex-wrap: wrap;
 }
@@ -1058,7 +1066,7 @@ object-fit: cover;
 /*固定ページのタイトル*/
 .page h1.entry-title {
   background: #ffedb5 !important;
-  padding: 50px 0 !important;
+  padding: 30px 0 !important;
   margin-bottom: 0 !important;
   display: flex;
   justify-content: center;
@@ -1067,29 +1075,33 @@ object-fit: cover;
 }
 
 /*タイトル横の画像（固定ページ毎に変わる画像）*/
+.type-page .entry-title::after {
+  width: 16%;
+  padding-left: 30px;
+}
+
 
 /*アマゾン*/
 .post-61874 .entry-title::after {
   content: url(./images/featured-page/featured-page__bad-amazon.svg);
-  width: 14%;
+  
 }
 
 /*エンジニア*/
 .post-61883 .entry-title::after {
   content: url(./images/featured-page/featured-page__engineer.svg);
-  width: 14%;
 }
 
 /*やばい事件*/
 .post-61879 .entry-title::after {
   content: url(./images/featured-page/featured-page__bad-story.svg);
-  width: 14%;
+  
 }
 
 /*アメリカーんなものを食う*/
-.post-61874 .entry-title::after {
-  content: url(./images/featured-page/featured-page__bad-foodsvg);
-  width: 14%;
+.post-61552 .entry-title::after {
+  width: 12%;
+  content: url(./images/featured-page/featured-page__bad-food.svg);
 }
 
 
@@ -1133,7 +1145,7 @@ object-fit: cover;
   .lcp_catlist::after{
   content:"";
   display: block;
-  width:21%;
+  width:33%;
   }
 
 
@@ -1290,9 +1302,16 @@ object-fit: cover;
 
 *************************************************/
 
+/*ポートランドの日常ページとプロフィールページの見出しを消す*/
+
+.post-61851 h1.entry-title,.post-61847 h1.entry-title {
+  display: none !important;
+}
+
 .profile-container {
   padding: 50px 100px;
   margin: 0 auto;
+  background-color: #ffecda;
 }
 
 .profile-wrap {
@@ -1594,20 +1613,17 @@ ul.profile-box {
 }
 
   /*新着記事*/
-  .entry-content > div {
-    margin-bottom: 0;
-  }
-  .st-topcontent::before {
-   content: '新着記事';
-   background-color: #f9b19d;
-   text-align: center;
-   width: 100%;
-   padding: 10px 0;
-   font-size: 19px;
-   display: block;
-   margin-bottom: 30px;
-   color: #fff;
- }
+.st-topcontent::before {
+  content: '新着記事';
+  background-color: #f9b19d;
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 19px;
+  display: block;
+  margin-bottom: 30px;
+  color: #fff;
+}
  .row-box-article{
    padding:0 20px;
  }
