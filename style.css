@@ -104,6 +104,7 @@ img:not(.size-st_header_slider), video, object{
 }
 
 
+
 /*
 
 	アフィンガー デフォルト設定の上書き:
@@ -153,8 +154,13 @@ display: none;
  margin-top: 10px;
 }
 
+#st-header-top-widgets-box .st-content-width{
+  padding: 0 !important;
+}
 
-/*メニューバー*/
+
+/*ヘッダー　メニューバー*/
+
 #st-header {
 min-height: 0 !important;
 }
@@ -181,7 +187,6 @@ color: #fff !important;
 .page .st-eyecatch-under{
 display: none;
 }
-
 
 
 /*
@@ -319,6 +324,7 @@ margin-bottom: 0;
 .kanren dt img {
   width: 100%;
   aspect-ratio: 5 / 3;
+  object-fit: cover;
 }
 
 
@@ -339,6 +345,10 @@ margin-bottom: 0;
 
 *************************************************/
 
+/*ヘッダーを消す(固定ページ)*/
+.not-front-page:not(.single) #st-headerbox {
+  display: none;
+}
 
 /*サイドを消すページ(投稿ページ以外)*/
 .not-front-page:not(.single) #side{
@@ -354,8 +364,6 @@ margin-bottom: 0;
 .single .footer-topbox .featured-contens__box{
   display: none;
 }
-
-
 
 /*
 
@@ -403,9 +411,7 @@ margin-bottom: 0;
   margin: 0 auto;
 }
 .sub-title {
-  font-size: 8px;
-  font-size: 0.8rem;
-  line-height: 1.125;
+  font-size: 0.78rem;
   line-height: 1;
   text-align: center;
   font-weight: bold;
@@ -845,6 +851,10 @@ h2:not([class^="is-style-st-heading-custom-"]):not([class*=" is-style-st-heading
 }
 
 /*投稿ページ：下： (最新記事）＆（おすすめ記事)のタイトルのレイアウト修正：*/
+#st-footer-under-widgets-box{
+  max-width: 1178px !important;
+}
+
 
 .st-widgets-box h3,.st-widgets-title{
   background: #ffede9 !important;
@@ -865,6 +875,31 @@ h2:not([class^="is-style-st-heading-custom-"]):not([class*=" is-style-st-heading
 .articles__container__bottom .widget_newentry_widget dt {
   padding-right: 10px;
 }
+
+.articles__container__bottom .newentrybox dt{
+  width: 44%;
+}
+
+.articles__container__bottom .newentrybox dl {
+  display: flex;
+  flex-wrap:wrap;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.articles__container__bottom .newentrybox .kanren dd {
+  padding-left: 0 !important;
+  width: 52%;
+  text-align: left;
+}
+
+
+.articles__container__bottom .newentrybox .kanren .kanren-t {
+  font-size: 0.8em;
+  line-height: 20px;
+}
+
+
 /*投稿ページ：下： おすすめ記事レイアウト*/
 .articles__container__bottom .bt-right .kanren.pop-box {
   display: flex;
