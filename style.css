@@ -105,6 +105,7 @@ img:not(.size-st_header_slider), video, object{
 
 
 
+
 /*
 
 	アフィンガー デフォルト設定の上書き:
@@ -158,6 +159,14 @@ display: none;
   padding: 0 !important;
 }
 
+.entry-content p {
+  letter-spacing: 0.01em;
+  font-size: 1.1rem;
+  line-height: 1.6em;
+}
+html.s-navi-search-overlay{
+  margin:0 !important;
+}
 
 /*ヘッダー　メニューバー*/
 
@@ -1019,7 +1028,7 @@ h2:not([class^="is-style-st-heading-custom-"]):not([class*=" is-style-st-heading
 .archive .kanren:not(.section .kanren),.page .archive.kanren{
   display: flex;
   justify-content:space-around;
-  padding: 30px 75px;
+  padding: 30px 15px;
   margin: 0 auto;
   flex-wrap: wrap;
 }
@@ -1047,6 +1056,7 @@ width: 21%;
  border: 5px solid #ffffff;
  box-sizing: border-box;
  margin-bottom: 10px;
+ aspect-ratio: 5 / 3;
 }
 
 .archive .kanren:not(.section .kanren) dt img,.page .archive.kanren li img{
@@ -1400,17 +1410,30 @@ ul.profile-box {
   display: none !important;
 }
 .contact-post-img {
-  width: 40%;
+  width: 222px;
   margin: 0 auto;
 }
 
-
-/*グーグルお問い合わせフォーム*/
 .contact-form {
   margin: 0 auto;
-  width: 600px;
   overflow: visible !important;
   padding: 50px 0;
+}
+
+/*グーグルお問い合わせフォーム*/
+.googleform-wrapper {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  overflow-y: scroll;
+}
+
+.googleform-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /*
@@ -1559,6 +1582,16 @@ ul.profile-box {
   .articles__container__bottom .bt-right .kanren.pop-box dl{
     width:45%;
   }
+  /*〜の記事一覧）*/
+  .lcp_catlist li {
+    width: 24% !important;
+  }
+
+  .lcp_catlist::after {
+    content: "";
+    display: block;
+    width: 27%;
+}
   
 }
 
@@ -1666,7 +1699,7 @@ ul.profile-box {
  }
  
  .kanren dl {
-      max-width: 48% !important;
+      max-width: 100% !important;
  }
 
 
@@ -1685,7 +1718,7 @@ ul.profile-box {
    display: block;
    width: 48% !important;
  }
- .kanren.pop-box {
+ .home .kanren.pop-box {
    background-color: #fff5d0 !important;
    margin: 0;
  }
@@ -1767,8 +1800,10 @@ ul.profile-box {
 }
 
 
- /*　会員登録（スマホ）*/
-
+ /*〜の記事一覧（スマホ）*/
+.lcp_catlist li {
+  width: 47% !important;
+}
  
  /*　プロフィール（スマホ）*/
  .st-author-profile {
@@ -1776,13 +1811,28 @@ ul.profile-box {
 }
 
 /*　投稿ページの下の右側（おすすめ記事）を消す（スマホ）*/
- .single .bt-right{
+
+.single .bt-right{
   display: none;
  }
+
+ .articles__container__bottom .bt-right {
+  width: 100%;
+  padding: 0 15px;
+}
+
+.articles__container__bottom .bt-right .kanren.pop-box dl {
+  width: 48%;
+}
+
+
+/*　投稿ページの下の左側（最新記事）*/
  .articles__container__bottom .bt-left {
   width: 100%;
   padding: 20px 15px;
  }
+
+
 
 
 /*ショートカット (モバイル)*/
