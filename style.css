@@ -16,6 +16,10 @@ Version: 20210719
   width: 1240px !important;
   margin: 0 auto !important;
 }
+#st-menuwide {
+  margin: 0 0 !important;
+}
+
   
 	/*-- ここまで --*/
 }
@@ -105,7 +109,6 @@ img:not(.size-st_header_slider), video, object{
 
 
 
-
 /*
 
 	アフィンガー デフォルト設定の上書き:
@@ -114,7 +117,7 @@ img:not(.size-st_header_slider), video, object{
 
 /*一面に表示する*/
 #st-menuwide,#wrapper-in,#st-menuwide, #content-w,#content,#footer{
-  max-width:none !important;
+  max-width:100% !important;
   padding: 0 0!important;
 }
 
@@ -182,6 +185,7 @@ padding: 0 !important;
 #st-menuwide {
 margin-bottom: 50px;
 }
+
 ul#menu-header {
   max-width: 100%;
 }
@@ -709,17 +713,12 @@ ul.profile-sns{
 
 *************************************************/
 
-.single #contentInner {
-margin-right: 0;
-}
-
-.single #side aside {
-  float: left;
-  padding-top: 65px;
-}
-
 .single　main{
   padding: 20px 30px;
+}
+
+.single #side {
+  padding-top: 65px;
 }
 
 /*　投稿ページ:サイド　（２４Hの投稿）ワードプレスプラグイン[WPP]*/
@@ -1809,7 +1808,7 @@ ul.profile-box {
 .lcp_catlist li {
   width: 47% !important;
 }
- 
+
  /*　プロフィール（スマホ）*/
  .st-author-profile {
   margin: 20px 0;
@@ -1820,6 +1819,12 @@ h1.entry-title {
   font-size: 20px !important;
   line-height: 24px !important;
 }
+
+/*プロフィールページ*/
+.profile-container {
+  padding:0 !important;
+}
+
 
 /*　投稿ページの下の右側（おすすめ記事）を消す（スマホ）*/
 
