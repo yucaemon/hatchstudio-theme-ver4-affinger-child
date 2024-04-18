@@ -19,7 +19,6 @@ Version: 20210719
 #st-menuwide {
   margin: 0 0 !important;
 }
-
   
 	/*-- ここまで --*/
 }
@@ -64,6 +63,7 @@ Version: 20210719
   margin: 0 auto !important;
   padding: 40px 0 !important;
 }
+
 
 .wide-obi{
   background-color: #ffecda;
@@ -1518,6 +1518,11 @@ ul.profile-box {
   #st-menuwide {
     margin-bottom: 0;
   }
+
+  #content-w {
+    max-width: 1180px;
+    margin: 0 0 !important;
+  }
 }
 
 /*media Queries タブレットサイズ（600px～959px）のみで適応したいCSS -タブレットのみ
@@ -1592,8 +1597,6 @@ ul.profile-box {
     width: 27%;
 }
   
-}
-
 
  /*media Queries スマホサイズ（599px）以下で適応したいCSS - スマホのみ
 ---------------------------------------------------------------------------------------------------*/
@@ -1812,6 +1815,14 @@ ul.profile-box {
  /*　プロフィール（スマホ）*/
  .st-author-profile {
   margin: 20px 0;
+}
+
+.profile-container-img-sofa {
+  display: none;
+}
+
+.profile-container-img-cat {
+  display: none;
 }
 
 /*プライベートページ*/
