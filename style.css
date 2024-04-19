@@ -1300,10 +1300,18 @@ object-fit: cover;
   padding: 50px 0;
 }
 
-.sns-embed__item{
+/*SNSページ*/
+
+.sns-embed__container{
+  padding-bottom:30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.sns-embed__item {
   width: 25%;
   padding: 25px 24px;
-  margin: 53px 0;
+  margin: 50px auto 0 auto;
 }
 
 .sns-embed__item-title {
@@ -1371,15 +1379,10 @@ object-fit: cover;
 }
 
 .profile-head {
-  font-size: 60px;
+  font-size: 55px;
   color: #fff;
   font-weight: bold;
   margin: 20px 0;
-}
-
-ul.profile-box {
-  padding: 0;
-  margin: 47px 0;
 }
 
 .profile-text {
@@ -1395,6 +1398,7 @@ ul.profile-box {
   width: 20%;
   padding-top: 130px;
 }
+
 
 
 
@@ -1596,6 +1600,53 @@ ul.profile-box {
     display: block;
     width: 27%;
 }
+
+/*　プロフィールページ*/
+
+.profile-container {
+  padding: 20px;
+}
+
+.profile-container-img-sofa {
+  display: none;
+}
+
+.profile-container-img-cat {
+  display: none;
+}
+
+.profile-wrap {
+  width: 100%;
+  padding: 0 20px;
+}
+.profile-head {
+  font-size: 38px;
+  text-align: center;
+}
+
+.profile-header {
+  float: left;
+  width: 22%;
+  padding-right: 14px;
+}
+
+.profile-img-top::before {
+  content: url(./images/profile-img-sofa.svg);
+}
+
+.profile-img-bottom::before {
+  content: url(./images/profile-img-cat.svg);
+}
+
+.profile-img-bottom {
+  width: 25%;
+  margin-left: auto;
+}
+
+
+
+}
+
   
 
  /*media Queries スマホサイズ（599px）以下で適応したいCSS - スマホのみ
@@ -1815,14 +1866,6 @@ ul.profile-box {
  /*　プロフィール（スマホ）*/
  .st-author-profile {
   margin: 20px 0;
-}
-
-.profile-container-img-sofa {
-  display: none;
-}
-
-.profile-container-img-cat {
-  display: none;
 }
 
 /*プライベートページ*/
@@ -2088,6 +2131,23 @@ li.menu-width-max ul.menu-second-level li {
     width: 100%;
     background-color: #E0F1EC;
 }
+
+/*　SNSページ*/
+
+.daily-life-page-img {
+  width: 87%;
+}
+
+.sns-embed__container{
+  display: block;
+}
+
+.sns-embed__item {
+  width: 300px;
+  padding: 25px 24px;
+  margin: 35px auto;
+}
+
 }
 
 /*
