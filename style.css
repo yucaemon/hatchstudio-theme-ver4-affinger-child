@@ -171,6 +171,7 @@ html.s-navi-search-overlay{
   margin:0 !important;
 }
 
+
 /*ヘッダー　メニューバー*/
 
 #st-header {
@@ -712,10 +713,6 @@ ul.profile-sns{
 	投稿ページ
 
 *************************************************/
-
-.single　main{
-  padding: 20px 30px;
-}
 
 .single #side {
   padding-top: 65px;
@@ -1584,9 +1581,7 @@ object-fit: cover;
   .row-box-article .st-cardstyle .kanren dl {
     width: 48% ;
   }
-  .single #side aside{
-    display: none;
-  }
+ 
   .articles__container__bottom .bt-right .kanren.pop-box dl{
     width:45%;
   }
@@ -1642,6 +1637,9 @@ object-fit: cover;
   width: 25%;
   margin-left: auto;
 }
+.yarpp-thumbnails-horizontal .yarpp-thumbnail {
+  width: 30% !important;
+}
 
 
 
@@ -1654,7 +1652,13 @@ object-fit: cover;
 @media print, screen and (max-width: 599px) {
 
 /*　トップページ（スマホ）*/
- 
+
+.single #side aside{
+  display: none;
+}
+.single #side {
+  padding-top: 0;
+}
  html.s-navi-search-overlay {
    margin: 0;
  }
@@ -1715,6 +1719,7 @@ object-fit: cover;
  
  #contentInner{
    width: 100% !important;
+   padding: 0 !important;
  }
  
  .home-post.post {
@@ -1856,7 +1861,6 @@ object-fit: cover;
 .yarpp-thumbnails-horizontal .yarpp-thumbnail {
   width: 46% !important;
 }
-
 
  /*〜の記事一覧（スマホ）*/
 .lcp_catlist li {
