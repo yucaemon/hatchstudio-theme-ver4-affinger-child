@@ -835,7 +835,6 @@ h2:not([class^="is-style-st-heading-custom-"]):not([class*=" is-style-st-heading
 .yarpp-thumbnails-horizontal .yarpp-thumbnail {
     width: 23% !important;
     height: auto;
-    margin: 5px !important;
     border: none !important;
     overflow:hidden;
 }
@@ -847,6 +846,19 @@ h2:not([class^="is-style-st-heading-custom-"]):not([class*=" is-style-st-heading
     margin: 7px !important;
     width: auto !important;
 }
+
+.yarpp-thumbnails-horizontal::after {
+  content: "";
+  display:block;
+  width:23%;
+}
+.yarpp-thumbnails-horizontal::before { 
+  content: ""; 
+  display:block; 
+  width:23%;
+  order: 1; /* アイテムの並び順 */
+}
+
 
 /*投稿ページ：下： tag cloudのレイアウト修正：*/
 .tagcloud a:hover{
