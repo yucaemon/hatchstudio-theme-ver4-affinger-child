@@ -998,7 +998,6 @@ h2:not([class^="is-style-st-heading-custom-"]):not([class*=" is-style-st-heading
 /*記事一覧の横レイアウト*/
 .archive aside:not(.section aside),.page .archive.kanren,.search-results article .kanren{
   background-color: #ffedb5 !important;
-  margin: 0 calc(50% - 50vw) !important;
   text-align: center !important;
   padding-bottom: 50px;
 }
@@ -1046,6 +1045,11 @@ order:1;
 content:"";
 display: block;
 width:46%;
+}
+
+.archive.kanren li a {
+  font-weight: bold;
+  color: #333;
 }
 
 .archive .kanren:not(.section .kanren) dl,.page .archive.kanren li{
@@ -1123,7 +1127,7 @@ object-fit: cover;
 /*固定ページのタイトル*/
 .page h1.entry-title {
   background: #ffedb5 !important;
-  padding: 30px 0 !important;
+  padding: 30px 15px !important;
   margin-bottom: 0 !important;
   display: flex;
   justify-content: center;
@@ -1177,6 +1181,7 @@ object-fit: cover;
   width: 17% !important;
   display: flex;
   flex-direction: column-reverse;
+  padding: 10px 0;
 }
 
 .lcp_catlist--title{
