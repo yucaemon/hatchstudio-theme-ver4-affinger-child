@@ -837,11 +837,17 @@ h2:not([class^="is-style-st-heading-custom-"]):not([class*=" is-style-st-heading
     height: auto;
     border: none !important;
     overflow:hidden;
+    padding-bottom: 15px;
 }
 .yarpp-thumbnail > img{
     width: 100% !important;
     margin: 0 !important;
 }
+
+.yarpp-thumbnail picture img{
+  width: 100% !important;
+}
+
 .yarpp-thumbnail-title {
     margin: 7px !important;
     width: auto !important;
